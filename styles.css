@@ -1,1301 +1,1556 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-
-  <title>
-    Ana’s Estate | Kalamata PDO Extra Virgin Olive Oil
-  </title>
-
-  <meta
-    name="description"
-    content="Ana’s Estate Kalamata PDO Extra Virgin Olive Oil. Single estate, early harvest, cold extracted and produced from Koroneiki olives in Kalamata, Greece."
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Parisienne&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  >
-
-  <script
-    src="script.js"
-    defer
-  ></script>
-</head>
-
-<body>
-
-  <!-- Announcement bar -->
-
-  <div class="topbar">
-    <span>Single Estate</span>
-    <b>✦</b>
-    <span>Cold Extracted</span>
-    <b>✦</b>
-    <span>Early Harvest</span>
-  </div>
-
-  <!-- Greek key divider -->
-
-  <div
-    class="greek-line"
-    aria-hidden="true"
-  ></div>
-
-  <!-- Header -->
-
-  <header class="site-header">
-
-    <nav
-      class="nav nav-left"
-      aria-label="Primary navigation"
-    >
-      <a href="#story">
-        Our Story
-      </a>
-
-      <a href="#quality">
-        Quality
-      </a>
-
-      <a href="#harvest">
-        Harvest
-      </a>
-    </nav>
-
-    <a
-      class="logo"
-      href="#top"
-      aria-label="Ana’s Estate home"
-    >
-      <img
-        src="assets/logo.png"
-        alt="Ana’s Estate"
-      >
-    </a>
-
-    <nav
-      class="nav nav-right"
-      aria-label="Secondary navigation"
-    >
-      <a href="#products">
-        Shop
-      </a>
-
-      <a href="#recipes">
-        Recipes
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-    </nav>
-
-    <!-- Mobile menu button -->
-
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Open navigation"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Mobile navigation -->
-
-    <nav
-      class="mobile-nav"
-      id="mobile-menu"
-      aria-label="Mobile navigation"
-    >
-      <a href="#story">
-        Our Story
-      </a>
-
-      <a href="#quality">
-        Quality
-      </a>
-
-      <a href="#harvest">
-        Harvest
-      </a>
-
-      <a href="#products">
-        Shop
-      </a>
-
-      <a href="#recipes">
-        Recipes
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-    </nav>
-
-  </header>
-
-  <main id="top">
-
-    <!-- Hero -->
-
-    <section
-      class="hero"
-      aria-labelledby="hero-title"
-    >
-
-      <img
-        class="hero-art"
-        src="assets/grove-line-art.png"
-        alt=""
-        aria-hidden="true"
-      >
-
-      <div
-        class="hero-fade"
-        aria-hidden="true"
-      ></div>
-
-      <div class="hero-copy">
-
-        <p class="overline gold">
-          2025 Early Harvest
-        </p>
-
-        <h1 id="hero-title">
-          PDO Kalamata
-          <br>
-
-          <span>
-            Extra Virgin Olive Oil
-          </span>
-        </h1>
-
-        <p class="fr">
-          Huile d’olive vierge extra
-        </p>
-
-        <p class="caps">
-          Single Estate
-          <i>◆</i>
-          Cold Extracted
-        </p>
-
-        <p class="script">
-          Koroneiki Monovarietal
-        </p>
-
-        <p class="origin">
-          Product of Greece / Produit de Grèce
-        </p>
-
-        <a
-          class="btn"
-          href="#products"
-        >
-          Shop Now
-        </a>
-
-      </div>
-
-      <img
-        class="hero-bottle"
-        src="assets/hero-bottle.png"
-        alt="Ana’s Estate 750 ml Extra Virgin Olive Oil bottle"
-      >
-
-    </section>
-
-    <!-- Family story -->
-
-    <section
-      class="story-section"
-      id="story"
-      aria-labelledby="story-title"
-    >
-
-      <div class="story-portrait">
-
-        <img
-          src="assets/story-portrait.png"
-          alt="Ana’s Estate family portrait"
-        >
-
-      </div>
-
-      <div class="story-content">
-
-        <p class="section-label">
-          Our Heritage
-        </p>
-
-        <h2 id="story-title">
-          Our Family Story
-        </h2>
-
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
-
-        <p>
-          From our family groves in Kalamata, Greece,
-          Ana’s Estate Extra Virgin Olive Oil is produced
-          exclusively from carefully selected Koroneiki olives.
-        </p>
-
-        <p>
-          Our olives are harvested with care and cold extracted
-          within hours of harvest to preserve their exceptional
-          flavour, fresh aroma and natural quality.
-        </p>
-
-        <p>
-          Every bottle reflects our family’s connection to the
-          land, our Greek heritage and our commitment to producing
-          authentic Kalamata olive oil.
-        </p>
-
-        <p class="signature">
-          The Karteros Family
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- Kalamata and product origin -->
-
-    <section
-      class="origin-section"
-      id="quality"
-      aria-labelledby="origin-title"
-    >
-
-      <div class="section-heading">
-
-        <p class="section-label">
-          From Kalamata, Greece
-        </p>
-
-        <h2 id="origin-title">
-          Rooted in Place
-        </h2>
-
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
-
-      </div>
-
-      <img
-        class="origin-art"
-        src="assets/grove-line-art.png"
-        alt="Line-art illustration of the Ana’s Estate olive groves in Kalamata"
-      >
-
-      <div class="origin-grid">
-
-        <article>
-
-          <div
-            class="icon"
-            aria-hidden="true"
-          >
-            ◇
-          </div>
-
-          <h3>
-            PDO Kalamata
-          </h3>
-
-          <p>
-            Protected Designation of Origin certification connects
-            our olive oil directly to the Kalamata region and its
-            recognized production standards.
-          </p>
-
-        </article>
-
-        <article>
-
-          <div
-            class="icon"
-            aria-hidden="true"
-          >
-            ❧
-          </div>
-
-          <h3>
-            Koroneiki Olives
-          </h3>
-
-          <p>
-            Small, aromatic Koroneiki olives produce a vibrant oil
-            with fruity character, balanced bitterness and a
-            distinctive peppery finish.
-          </p>
-
-        </article>
-
-        <article>
-
-          <div
-            class="icon"
-            aria-hidden="true"
-          >
-            ♧
-          </div>
-
-          <h3>
-            Single Estate
-          </h3>
-
-          <p>
-            Our olives come from our family groves, allowing us to
-            maintain traceability and consistency from harvest to
-            bottle.
-          </p>
+:root {
+  --blue: #001263;
+  --blue-dark: #000b45;
+  --gold: #b98a3d;
+  --cream: #f7f4ee;
+  --paper: #fcfbf8;
+  --ink: #07134d;
+  --body-text: #34384f;
+  --white: #ffffff;
+  --light-border: #eeeeee;
+  --gold-border: #d9c5a3;
+
+  --serif: "Cormorant Garamond", serif;
+  --sans: "Montserrat", sans-serif;
+
+  --page-width: 1280px;
+  --section-padding: clamp(64px, 8vw, 110px);
+}
+
+/* ==================================================
+   Base
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  margin: 0;
+  color: var(--body-text);
+  background: var(--white);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--sans);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+section {
+  scroll-margin-top: 115px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+  font-family: var(--serif);
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+/* ==================================================
+   Announcement bar
+================================================== */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  min-height: 31px;
+  padding: 7px 16px;
+
+  color: var(--white);
+  background: var(--blue);
+
+  font: 600 12px var(--serif);
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.topbar b {
+  color: var(--gold);
+}
+
+/* ==================================================
+   Greek key divider
+================================================== */
+
+.greek-line {
+  width: 100%;
+  height: 28px;
+
+  background-color: var(--blue);
+  background-image: url("./assets/greek-key.svg");
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: auto 15px;
+
+  border-top: 2.5px solid var(--gold);
+  border-bottom: 2.5px solid var(--gold);
+}
+
+/* ==================================================
+   Header and navigation
+================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px minmax(0, 1fr);
+  align-items: center;
+
+  height: 115px;
+  padding: 0 clamp(24px, 7vw, 110px);
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--light-border);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  grid-column: 2;
+  width: 190px;
+  justify-self: center;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 5vw, 100px);
+
+  color: var(--ink);
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav a {
+  position: relative;
+  padding: 10px 0;
+}
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+
+  height: 1px;
+
+  content: "";
+  background: var(--gold);
+
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--gold);
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav-left {
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: flex-start;
+}
+
+.nav-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-content: flex-end;
+}
+
+/* ==================================================
+   Mobile navigation
+================================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 26px;
+  height: 2px;
+  margin: 5px auto;
+
+  background: var(--blue);
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* ==================================================
+   Reusable section elements
+================================================== */
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+
+.section-heading > p:last-child {
+  max-width: 660px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.section-label {
+  margin-bottom: 10px;
+
+  color: var(--gold);
+
+  font: 700 12px var(--serif);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ornament {
+  margin: 8px 0 20px;
+
+  color: var(--gold);
+
+  font-family: var(--serif);
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: 12px;
+
+  color: var(--blue);
+
+  font-size: 42px;
+  line-height: 1;
+}
+
+.gold {
+  color: var(--gold);
+}
+
+/* ==================================================
+   Buttons
+================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  margin-top: 16px;
+  padding: 14px 30px;
+
+  color: var(--white);
+  background: var(--blue);
+  border: 1px solid var(--blue);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  color: var(--white);
+  background: var(--gold);
+  border-color: var(--gold);
+
+  box-shadow: 0 10px 25px rgba(0, 18, 99, 0.16);
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   Hero
+================================================== */
+
+.hero {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+  align-items: center;
+
+  min-height: 650px;
+  padding: 65px clamp(24px, 8vw, 130px) 80px;
+
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--white);
+}
+
+.hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+}
 
-        </article>
-
-      </div>
+.hero-fade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.92) 43%,
+      rgba(255, 255, 255, 0.35) 72%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+
+  max-width: 710px;
+
+  text-align: center;
+}
+
+.overline {
+  margin-bottom: 8px;
+
+  font: 600 22px var(--serif);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
 
-    </section>
-
-    <!-- Harvest process -->
+.hero h1 {
+  margin: 0;
 
-    <section
-      class="harvest-section"
-      id="harvest"
-      aria-labelledby="harvest-title"
-    >
+  color: var(--blue);
+
+  font: 600 clamp(48px, 6vw, 82px) / 0.95 var(--serif);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
 
-      <div class="section-heading">
+.hero h1 span {
+  font-size: 0.72em;
+}
 
-        <p class="section-label">
-          From Grove to Bottle
-        </p>
+.fr,
+.caps,
+.origin {
+  color: var(--blue);
 
-        <h2 id="harvest-title">
-          Our Harvest Process
-        </h2>
+  font: 600 12px var(--serif);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
 
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
+.fr {
+  margin-top: 14px;
+}
 
-      </div>
+.caps {
+  margin-top: 18px;
+}
 
-      <img
-        class="harvest-art"
-        src="assets/harvest-line-art.png"
-        alt="Line-art illustration of the Koroneiki olive harvest"
-      >
+.caps i {
+  margin: 0 10px;
 
-      <div class="harvest-steps">
+  color: var(--gold);
 
-        <article>
+  font-style: normal;
+}
 
-          <span class="step-number">
-            01
-          </span>
+.script {
+  margin: 18px 0 8px;
 
-          <h3>
-            Early Harvest
-          </h3>
+  color: var(--blue);
 
-          <p>
-            The olives are gathered during the early harvest period
-            to capture fresh flavour, aroma and natural intensity.
-          </p>
+  font: 400 clamp(34px, 4vw, 52px) "Parisienne", cursive;
+}
 
-        </article>
+.origin {
+  font-size: 10px;
+}
 
-        <article>
+.hero-bottle {
+  position: relative;
+  z-index: 3;
 
-          <span class="step-number">
-            02
-          </span>
+  align-self: end;
+  justify-self: center;
 
-          <h3>
-            Carefully Gathered
-          </h3>
+  width: auto;
+  max-height: 560px;
 
-          <p>
-            Our olives are handled carefully to protect the fruit
-            and preserve the quality of the oil they produce.
-          </p>
+  object-fit: contain;
 
-        </article>
+  filter: drop-shadow(0 26px 18px rgba(0, 0, 0, 0.2));
+}
 
-        <article>
+/* ==================================================
+   Family story
+================================================== */
 
-          <span class="step-number">
-            03
-          </span>
+.story-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
+  gap: clamp(40px, 8vw, 110px);
+  align-items: center;
 
-          <h3>
-            Cold Extracted
-          </h3>
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: var(--section-padding) clamp(24px, 6vw, 80px);
+}
 
-          <p>
-            Extraction takes place within hours of harvest at a
-            controlled temperature to preserve flavour and freshness.
-          </p>
+.story-portrait {
+  position: relative;
 
-        </article>
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        <article>
+.story-portrait::before {
+  position: absolute;
 
-          <span class="step-number">
-            04
-          </span>
+  width: 82%;
+  aspect-ratio: 1;
 
-          <h3>
-            Packed with Care
-          </h3>
+  content: "";
 
-          <p>
-            The finished oil is protected from heat and light before
-            being prepared for its journey from Greece to Canada.
-          </p>
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+}
 
-        </article>
+.story-portrait img {
+  position: relative;
 
-      </div>
+  width: min(100%, 390px);
+  height: auto;
+}
 
-    </section>
+.story-content {
+  max-width: 680px;
+}
 
-    <!-- Quality details -->
+.story-content .ornament {
+  text-align: left;
+}
 
-    <section
-      class="quality-section"
-      aria-labelledby="quality-title"
-    >
+.story-content p {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.75;
+}
 
-      <div class="quality-intro">
+.signature {
+  margin-top: 24px;
 
-        <p class="section-label gold">
-          Ana’s Estate Quality
-        </p>
+  color: var(--blue);
 
-        <h2 id="quality-title">
-          Authenticity in Every Drop
-        </h2>
+  font: 400 30px "Parisienne", cursive !important;
+}
 
-        <p>
-          Our olive oil is defined by its origin, olive variety,
-          harvest timing and carefully controlled production.
-        </p>
+/* ==================================================
+   Origin and Kalamata
+================================================== */
 
-      </div>
+.origin-section {
+  padding: var(--section-padding) clamp(24px, 7vw, 100px);
 
-      <div class="quality-grid">
+  background: var(--cream);
+}
 
-        <article>
-          <strong>PDO</strong>
-          <span>Kalamata Certified</span>
-        </article>
+.origin-art {
+  width: 100%;
+  max-width: var(--page-width);
+  height: clamp(280px, 40vw, 500px);
+  margin: 0 auto 55px;
 
-        <article>
-          <strong>100%</strong>
-          <span>Koroneiki Olives</span>
-        </article>
+  object-fit: cover;
+  object-position: center;
 
-        <article>
-          <strong>Single</strong>
-          <span>Estate Origin</span>
-        </article>
+  opacity: 0.88;
+  mix-blend-mode: multiply;
+}
 
-        <article>
-          <strong>Early</strong>
-          <span>Harvest</span>
-        </article>
+.origin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 
-        <article>
-          <strong>Cold</strong>
-          <span>Extracted</span>
-        </article>
+  max-width: 1120px;
+  margin: 0 auto;
 
-        <article>
-          <strong>2025</strong>
-          <span>Harvest Year</span>
-        </article>
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid var(--gold-border);
+}
 
-      </div>
+.origin-grid article {
+  padding: 38px 34px;
 
-    </section>
+  text-align: center;
 
-    <!-- Tasting notes -->
+  border-right: 1px solid var(--gold-border);
+}
 
-    <section
-      class="tasting-section"
-      aria-labelledby="tasting-title"
-    >
+.origin-grid article:last-child {
+  border-right: 0;
+}
 
-      <div class="section-heading">
+.origin-grid p {
+  margin-bottom: 0;
 
-        <p class="section-label">
-          Sensory Profile
-        </p>
+  font-family: var(--serif);
+  font-size: 16px;
+}
 
-        <h2 id="tasting-title">
-          Tasting Notes
-        </h2>
+/* ==================================================
+   Harvest process
+================================================== */
 
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
+.harvest-section {
+  padding: var(--section-padding) clamp(24px, 7vw, 100px);
 
-      </div>
+  background: var(--white);
+}
 
-      <div class="note-grid">
+.harvest-art {
+  width: 100%;
+  max-width: var(--page-width);
+  height: clamp(300px, 42vw, 540px);
+  margin: 0 auto 60px;
 
-        <article>
+  object-fit: cover;
+  object-position: center;
 
-          <div
-            class="icon"
-            aria-hidden="true"
-          >
-            ❧
-          </div>
+  mix-blend-mode: multiply;
+}
 
-          <h3>
-            Fruity
-          </h3>
+.harvest-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-          <p>
-            Vibrant and fresh with a lively fruity character.
-          </p>
+  max-width: 1180px;
+  margin: 0 auto;
 
-        </article>
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+}
 
-        <article>
+.harvest-steps article {
+  position: relative;
 
-          <div
-            class="icon"
-            aria-hidden="true"
-          >
-            ✤
-          </div>
+  padding: 34px 28px;
 
-          <h3>
-            Aroma
-          </h3>
+  text-align: center;
 
-          <p>
-            Fresh grass, herbs and green tomato.
-          </p>
+  border-right: 1px solid var(--gold-border);
+}
 
-        </article>
+.harvest-steps article:last-child {
+  border-right: 0;
+}
 
-        <article>
+.step-number {
+  display: block;
+  margin-bottom: 12px;
 
-          <div
-            class="icon"
-            aria-hidden="true"
-          >
-            ❦
-          </div>
+  color: var(--gold);
 
-          <h3>
-            Finish
-          </h3>
+  font: 700 14px var(--serif);
+  letter-spacing: 0.12em;
+}
 
-          <p>
-            Balanced bitterness with a clean peppery finish.
-          </p>
+.harvest-steps p {
+  margin-bottom: 0;
 
-        </article>
+  font-family: var(--serif);
+  font-size: 15px;
+}
 
-      </div>
+/* ==================================================
+   Quality specifications
+================================================== */
 
-    </section>
-
-    <!-- Perfect for -->
+.quality-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.6fr);
+  gap: clamp(40px, 7vw, 90px);
+  align-items: center;
 
-    <section
-      class="uses-section"
-      aria-labelledby="uses-title"
-    >
+  padding: var(--section-padding) clamp(24px, 8vw, 120px);
 
-      <div class="section-heading">
+  color: var(--white);
+  background: var(--blue);
+}
 
-        <p class="section-label">
-          In the Kitchen
-        </p>
+.quality-intro {
+  max-width: 520px;
+}
 
-        <h2 id="uses-title">
-          Perfect For
-        </h2>
+.quality-intro h2,
+.quality-intro p {
+  color: var(--white);
+}
 
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
+.quality-intro p {
+  font-family: var(--serif);
+  font-size: 18px;
+}
 
-      </div>
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
 
-      <div class="uses-grid">
+  background: rgba(185, 138, 61, 0.55);
+  border: 1px solid rgba(185, 138, 61, 0.55);
+}
 
-        <article>
-          <img
-            src="assets/icon-salads.png"
-            alt=""
-            aria-hidden="true"
-          >
+.quality-grid article {
+  min-height: 150px;
+  padding: 24px;
 
-          <h3>
-            Salads
-          </h3>
-        </article>
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-        <article>
-          <img
-            src="assets/icon-vegetables.png"
-            alt=""
-            aria-hidden="true"
-          >
+  background: var(--blue);
 
-          <h3>
-            Grilled Vegetables
-          </h3>
-        </article>
+  text-align: center;
+}
 
-        <article>
-          <img
-            src="assets/icon-seafood.png"
-            alt=""
-            aria-hidden="true"
-          >
+.quality-grid strong {
+  display: block;
 
-          <h3>
-            Seafood
-          </h3>
-        </article>
+  color: var(--gold);
 
-        <article>
-          <img
-            src="assets/icon-bread.png"
-            alt=""
-            aria-hidden="true"
-          >
+  font: 600 34px var(--serif);
+  line-height: 1;
+}
 
-          <h3>
-            Bread Dipping
-          </h3>
-        </article>
+.quality-grid span {
+  display: block;
+  margin-top: 10px;
 
-        <article>
-          <img
-            src="assets/icon-meats.png"
-            alt=""
-            aria-hidden="true"
-          >
+  color: var(--white);
 
-          <h3>
-            Meats
-          </h3>
-        </article>
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-        <article>
-          <img
-            src="assets/icon-soups.png"
-            alt=""
-            aria-hidden="true"
-          >
+/* ==================================================
+   Tasting notes
+================================================== */
 
-          <h3>
-            Soups
-          </h3>
-        </article>
+.tasting-section {
+  padding: var(--section-padding) clamp(24px, 8vw, 120px);
 
-      </div>
+  background: var(--paper);
+}
 
-    </section>
+.tasting-section .note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-    <!-- Products -->
+  max-width: 1000px;
+  margin: 0 auto;
 
-    <section
-      class="products"
-      id="products"
-      aria-labelledby="products-title"
-    >
+  background: var(--white);
+  border: 1px solid var(--gold-border);
+}
 
-      <div class="section-heading">
+.tasting-section .note-grid article {
+  padding: 46px 38px;
 
-        <p class="section-label">
-          Shop Ana’s Estate
-        </p>
+  text-align: center;
 
-        <h2 id="products-title">
-          Our Olive Oil
-        </h2>
+  border-right: 1px solid var(--gold-border);
+}
 
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
+.tasting-section .note-grid article:last-child {
+  border-right: 0;
+}
 
-      </div>
+.tasting-section .note-grid p {
+  margin-bottom: 0;
 
-      <div class="product-grid">
+  font-family: var(--serif);
+  font-size: 17px;
+}
 
-        <article class="product">
+/* ==================================================
+   Uses
+================================================== */
 
-          <img
-            src="assets/hero-bottle.png"
-            alt="Ana’s Estate 750 ml Extra Virgin Olive Oil bottle"
-          >
+.uses-section {
+  padding: var(--section-padding) clamp(24px, 6vw, 80px);
 
-          <div>
+  background: var(--white);
+}
 
-            <p class="product-format">
-              750 ml Bottle
-            </p>
+.uses-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
 
-            <h3>
-              Everyday Estate Bottle
-            </h3>
+  max-width: 1120px;
+  margin: 0 auto;
+}
 
-            <ul>
-              <li>Koroneiki Monovarietal</li>
-              <li>Early Harvest</li>
-              <li>Cold Extracted</li>
-              <li>PDO Kalamata</li>
-            </ul>
+.uses-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-            <div class="price">
-              Add Price
-            </div>
+  text-align: center;
+}
 
-            <a
-              class="btn stripe"
-              href="#"
-              data-product="bottle"
-            >
-              Buy Now
-            </a>
+.uses-grid img {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 16px;
 
-          </div>
+  object-fit: contain;
+}
 
-        </article>
+.uses-grid h3 {
+  margin: 0;
 
-        <article class="product">
+  font-size: 18px;
+}
 
-          <img
-            src="assets/tin-5l.png"
-            alt="Ana’s Estate 5 litre Extra Virgin Olive Oil tin"
-          >
+/* ==================================================
+   Products
+================================================== */
 
-          <div>
+.products {
+  padding: var(--section-padding) clamp(24px, 7vw, 100px);
 
-            <p class="product-format">
-              5L Tin
-            </p>
+  background: var(--cream);
+}
 
-            <h3>
-              Family and Kitchen Format
-            </h3>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
 
-            <ul>
-              <li>Koroneiki Monovarietal</li>
-              <li>Early Harvest</li>
-              <li>Cold Extracted</li>
-              <li>PDO Kalamata</li>
-            </ul>
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
 
-            <div class="price">
-              $150.00
-            </div>
+.product {
+  display: flex;
+  flex-direction: column;
 
-            <a
-              class="btn stripe"
-              href="#"
-              data-product="fiveL"
-            >
-              Buy Now
-            </a>
+  min-height: 100%;
+  padding: 34px;
 
-          </div>
+  background: var(--white);
+  border: 1px solid var(--gold-border);
 
-        </article>
+  text-align: center;
 
-        <article class="product">
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-          <img
-            src="assets/tin-16l.png"
-            alt="Ana’s Estate 16 litre Extra Virgin Olive Oil tin"
-          >
+.product:hover {
+  box-shadow: 0 22px 45px rgba(0, 18, 99, 0.12);
+  transform: translateY(-5px);
+}
 
-          <div>
+.product > img {
+  width: 100%;
+  height: 330px;
+  margin: 0 auto 24px;
 
-            <p class="product-format">
-              16L Tin
-            </p>
+  object-fit: contain;
+}
 
-            <h3>
-              Foodservice and Cellar Format
-            </h3>
+.product > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
 
-            <ul>
-              <li>Koroneiki Monovarietal</li>
-              <li>Early Harvest</li>
-              <li>Cold Extracted</li>
-              <li>PDO Kalamata</li>
-            </ul>
+.product-format {
+  margin-bottom: 6px;
 
-            <div class="price">
-              $450.00
-            </div>
+  color: var(--gold);
 
-            <a
-              class="btn stripe"
-              href="#"
-              data-product="sixteenL"
-            >
-              Buy Now
-            </a>
+  font: 700 12px var(--serif);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
-          </div>
+.product h3 {
+  font-size: 25px;
+}
 
-        </article>
+.product ul {
+  display: inline-block;
+  margin: 10px auto 18px;
+  padding-left: 20px;
 
-      </div>
+  color: var(--body-text);
 
-    </section>
+  font-family: var(--serif);
+  text-align: left;
+}
 
-    <!-- Recipes preview -->
+.price {
+  margin-top: auto;
 
-    <section
-      class="recipes-section"
-      id="recipes"
-      aria-labelledby="recipes-title"
-    >
+  color: var(--blue);
 
-      <div class="section-heading">
+  font: 600 28px var(--serif);
+}
 
-        <p class="section-label">
-          Mediterranean Inspiration
-        </p>
+/* ==================================================
+   Recipes
+================================================== */
 
-        <h2 id="recipes-title">
-          From Our Table
-        </h2>
+.recipes-section {
+  padding: var(--section-padding) clamp(24px, 7vw, 100px);
 
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
+  background: var(--white);
+}
 
-        <p>
-          Simple ways to enjoy Ana’s Estate Extra Virgin Olive Oil.
-        </p>
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
 
-      </div>
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
 
-      <div class="recipe-grid">
+.recipe-grid article {
+  overflow: hidden;
 
-        <article>
+  background: var(--paper);
+  border: 1px solid var(--gold-border);
 
-          <img
-            src="assets/recipe-greek-salad.jpg"
-            alt="Traditional Greek salad dressed with olive oil"
-          >
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
-          <div class="recipe-content">
+.recipe-grid article:hover {
+  box-shadow: 0 20px 40px rgba(0, 18, 99, 0.1);
+  transform: translateY(-4px);
+}
 
-            <h3>
-              Traditional Greek Salad
-            </h3>
+.recipe-grid img {
+  width: 100%;
+  height: 260px;
 
-            <p>
-              Tomatoes, cucumber, feta, oregano and a generous finish
-              of Ana’s Estate olive oil.
-            </p>
+  object-fit: cover;
+}
 
-          </div>
+.recipe-content {
+  padding: 28px;
+}
 
-        </article>
+.recipe-content h3 {
+  font-size: 25px;
+}
 
-        <article>
+.recipe-content p {
+  margin-bottom: 0;
 
-          <img
-            src="assets/recipe-bread-dipping.jpg"
-            alt="Rustic bread served with extra virgin olive oil"
-          >
+  font-family: var(--serif);
+  font-size: 16px;
+}
 
-          <div class="recipe-content">
+/* ==================================================
+   Contact
+================================================== */
 
-            <h3>
-              Greek Bread Dipping Oil
-            </h3>
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(45px, 8vw, 110px);
 
-            <p>
-              Extra virgin olive oil with oregano, herbs and freshly
-              ground black pepper.
-            </p>
+  padding: var(--section-padding) clamp(24px, 9vw, 140px);
 
-          </div>
+  background: var(--paper);
+}
 
-        </article>
+.contact-copy {
+  max-width: 580px;
+}
 
-        <article>
+.contact-copy .ornament {
+  text-align: left;
+}
 
-          <img
-            src="assets/recipe-roasted-vegetables.jpg"
-            alt="Mediterranean roasted vegetables with olive oil"
-          >
+.contact-copy > p {
+  font-family: var(--serif);
+  font-size: 18px;
+}
 
-          <div class="recipe-content">
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 
-            <h3>
-              Roasted Mediterranean Vegetables
-            </h3>
+  margin-top: 35px;
+  padding-top: 28px;
 
-            <p>
-              Seasonal vegetables roasted with olive oil, garlic and
-              fresh herbs.
-            </p>
+  border-top: 1px solid var(--gold-border);
+}
 
-          </div>
+.contact-details p {
+  margin-bottom: 0;
 
-        </article>
+  font-family: var(--serif);
+  font-size: 16px;
+}
 
-      </div>
+.contact-form {
+  display: grid;
+  gap: 12px;
 
-    </section>
+  padding: 38px;
 
-    <!-- Contact and wholesale -->
+  background: var(--white);
+  border: 1px solid var(--gold-border);
+  box-shadow: 0 18px 45px rgba(0, 18, 99, 0.08);
+}
 
-    <section
-      class="contact-section"
-      id="contact"
-      aria-labelledby="contact-title"
-    >
+.contact-form label {
+  margin-top: 4px;
 
-      <div class="contact-copy">
+  color: var(--blue);
 
-        <p class="section-label">
-          Contact and Wholesale
-        </p>
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-        <h2 id="contact-title">
-          Bring Ana’s Estate to Your Customers
-        </h2>
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px 14px;
 
-        <div
-          class="ornament"
-          aria-hidden="true"
-        >
-          — ◇ —
-        </div>
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--gold-border);
+  outline: 0;
 
-        <p>
-          Ana’s Estate is available for select restaurants,
-          specialty grocers, farm markets and food retailers.
-        </p>
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
-        <p>
-          For product questions, wholesale inquiries or retail
-          partnerships, send us a message.
-        </p>
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(185, 138, 61, 0.12);
+}
 
-        <div class="contact-details">
+.contact-form textarea {
+  resize: vertical;
+}
 
-          <p>
-            <strong>Email</strong>
-            <br>
+.contact-form .btn {
+  justify-self: start;
+}
 
-            <a href="mailto:info@anasestate.com">
-              info@anasestate.com
-            </a>
-          </p>
+/* ==================================================
+   Footer
+================================================== */
 
-          <p>
-            <strong>Imported by</strong>
-            <br>
-            Karteros Enterprises
-            <br>
-            Brampton, Ontario, Canada
-          </p>
+.site-footer {
+  color: var(--white);
+  background: var(--blue-dark);
+}
 
-        </div>
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.35fr repeat(3, 1fr);
+  gap: 50px;
 
-      </div>
+  padding: 55px clamp(24px, 8vw, 120px) 40px;
+}
 
-      <form
-        class="contact-form"
-        action="https://formsubmit.co/info@anasestate.com"
-        method="POST"
-      >
+.brand-col {
+  max-width: 320px;
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Ana’s Estate website inquiry"
-        >
+  text-align: center;
+}
 
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false"
-        >
+.brand-col img {
+  width: 160px;
+  margin: 0 auto 20px;
+}
 
-        <label for="contact-name">
-          Name
-        </label>
+.site-footer h4 {
+  margin-bottom: 16px;
 
-        <input
-          id="contact-name"
-          type="text"
-          name="name"
-          autocomplete="name"
-          required
-        >
+  color: var(--gold);
 
-        <label for="contact-email">
-          Email
-        </label>
+  font: 600 15px var(--serif);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-        <input
-          id="contact-email"
-          type="email"
-          name="email"
-          autocomplete="email"
-          required
-        >
+.site-footer a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 8px;
 
-        <label for="contact-subject">
-          Subject
-        </label>
+  color: rgba(255, 255, 255, 0.82);
 
-        <input
-          id="contact-subject"
-          type="text"
-          name="subject"
-        >
+  font: 14px / 1.45 var(--serif);
+}
 
-        <label for="contact-message">
-          Message
-        </label>
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--gold);
+}
 
-        <textarea
-          id="contact-message"
-          name="message"
-          rows="6"
-          required
-        ></textarea>
+.site-footer p {
+  color: rgba(255, 255, 255, 0.82);
 
-        <button
-          class="btn"
-          type="submit"
-        >
-          Send Message
-        </button>
+  font: 14px / 1.55 var(--serif);
+}
 
-      </form>
+.newsletter {
+  display: flex;
+  width: 100%;
+}
 
-    </section>
+.newsletter input {
+  min-width: 0;
+  width: 100%;
+  padding: 11px 12px;
 
-  </main>
+  color: var(--ink);
+  background: var(--white);
+  border: 0;
+}
 
-  <!-- Footer -->
+.newsletter button {
+  flex: 0 0 42px;
 
-  <footer class="site-footer">
+  color: var(--white);
+  background: var(--gold);
+  border: 0;
 
-    <div
-      class="greek-line"
-      aria-hidden="true"
-    ></div>
+  font-size: 23px;
 
-    <div class="footer-main">
+  cursor: pointer;
+}
 
-      <div class="brand-col">
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
 
-        <img
-          src="assets/logo_white.png"
-          alt="Ana’s Estate"
-        >
+  padding: 14px clamp(24px, 6vw, 90px);
 
-        <p>
-          Premium Extra Virgin Olive Oil from our family
-          groves in Kalamata, Greece.
-        </p>
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 
-        <p>
-          Tradition. Quality. Purity.
-        </p>
+  color: rgba(255, 255, 255, 0.75);
 
-      </div>
+  font: 12px var(--serif);
+}
 
-      <div>
+/* ==================================================
+   Tablet
+================================================== */
 
-        <h4>
-          Explore
-        </h4>
+@media (max-width: 1000px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
 
-        <a href="#story">
-          Our Story
-        </a>
+    height: 90px;
+    padding: 0 24px;
+  }
 
-        <a href="#quality">
-          Quality
-        </a>
+  .logo {
+    grid-column: 1;
+    grid-row: 1;
 
-        <a href="#harvest">
-          Harvest
-        </a>
+    width: 150px;
 
-        <a href="#products">
-          Shop
-        </a>
+    justify-self: start;
+  }
 
-        <a href="#recipes">
-          Recipes
-        </a>
+  .nav {
+    display: none;
+  }
 
-      </div>
+  .menu-toggle {
+    display: block;
 
-      <div>
+    grid-column: 2;
+    grid-row: 1;
 
-        <h4>
-          Customer Care
-        </h4>
+    justify-self: end;
+  }
 
-        <a href="#contact">
-          Contact
-        </a>
+  .mobile-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
 
-        <a href="#contact">
-          Shipping and Delivery
-        </a>
+    display: none;
+    flex-direction: column;
 
-        <a href="#contact">
-          Wholesale Inquiries
-        </a>
+    padding: 12px 24px 20px;
 
-        <a
-          href="assets/label.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Product Label
-        </a>
+    background: var(--white);
+    border-top: 1px solid var(--light-border);
+    border-bottom: 1px solid var(--gold-border);
+    box-shadow: 0 12px 24px rgba(0, 18, 99, 0.12);
+  }
 
-      </div>
+  .mobile-nav.is-open {
+    display: flex;
+  }
 
-      <div>
+  .mobile-nav a {
+    padding: 13px 0;
 
-        <h4>
-          Stay Connected
-        </h4>
+    color: var(--blue);
+    border-bottom: 1px solid var(--light-border);
 
-        <p>
-          Sign up for recipes, harvest updates and news from
-          our family groves.
-        </p>
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 
-        <form
-          class="newsletter"
-          action="https://formsubmit.co/info@anasestate.com"
-          method="POST"
-        >
+  .mobile-nav a:last-child {
+    border-bottom: 0;
+  }
 
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Ana’s Estate newsletter signup"
-          >
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
 
-          <label
-            for="newsletter-email"
-            hidden
-          >
-            Email address
-          </label>
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
 
-          <input
-            id="newsletter-email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          >
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
-          <button
-            type="submit"
-            aria-label="Subscribe"
-          >
-            ›
-          </button>
+  .hero {
+    grid-template-columns: 1fr 0.48fr;
+    min-height: 620px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
 
-        </form>
+  .hero-bottle {
+    max-height: 470px;
+  }
 
-      </div>
+  .story-section,
+  .quality-section,
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
 
-    </div>
+  .story-content,
+  .quality-intro,
+  .contact-copy {
+    max-width: 760px;
+    margin: 0 auto;
+  }
 
-    <div class="footer-bottom">
+  .story-content,
+  .contact-copy {
+    text-align: center;
+  }
 
-      <span>
-        © 2026 Ana’s Estate. All rights reserved.
-      </span>
+  .story-content .ornament,
+  .contact-copy .ornament {
+    text-align: center;
+  }
 
-      <span>
-        Product of Greece / Produit de Grèce
-      </span>
+  .origin-grid {
+    grid-template-columns: 1fr;
+  }
 
-      <span>
-        Imported by Karteros Enterprises
-      </span>
+  .origin-grid article {
+    border-right: 0;
+    border-bottom: 1px solid var(--gold-border);
+  }
 
-    </div>
+  .origin-grid article:last-child {
+    border-bottom: 0;
+  }
 
-  </footer>
+  .harvest-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-</body>
-</html>
+  .harvest-steps article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .harvest-steps article:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--gold-border);
+  }
+
+  .quality-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .uses-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 14px);
+    margin: 0 auto;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================================================
+   Mobile
+================================================== */
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
+  section {
+    scroll-margin-top: 90px;
+  }
+
+  .topbar {
+    gap: 9px;
+    min-height: 34px;
+
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .greek-line {
+    height: 16px;
+
+    background-size: auto 9px;
+
+    border-top-width: 1.5px;
+    border-bottom-width: 1.5px;
+  }
+
+  .site-header {
+    height: 78px;
+    padding: 0 18px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .hero {
+    display: block;
+
+    min-height: 820px;
+    padding: 55px 20px 290px;
+
+    text-align: center;
+  }
+
+  .hero-art {
+    opacity: 0.25;
+  }
+
+  .hero-fade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.85) 62%,
+        rgba(255, 255, 255, 0.55) 100%
+      );
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 13vw, 60px);
+  }
+
+  .overline {
+    font-size: 17px;
+  }
+
+  .fr,
+  .caps,
+  .origin {
+    letter-spacing: 0.12em;
+  }
+
+  .script {
+    font-size: 34px;
+  }
+
+  .hero-bottle {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+
+    max-height: 285px;
+
+    transform: translateX(50%);
+  }
+
+  .story-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .story-content p {
+    font-size: 17px;
+  }
+
+  .origin-section,
+  .harvest-section,
+  .quality-section,
+  .tasting-section,
+  .uses-section,
+  .products,
+  .recipes-section,
+  .contact-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .origin-art,
+  .harvest-art {
+    height: 260px;
+  }
+
+  .harvest-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .harvest-steps article {
+    border-right: 0;
+    border-bottom: 1px solid var(--gold-border);
+  }
+
+  .harvest-steps article:last-child {
+    border-bottom: 0;
+  }
+
+  .quality-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quality-grid article {
+    min-height: 125px;
+    padding: 18px;
+  }
+
+  .quality-grid strong {
+    font-size: 27px;
+  }
+
+  .tasting-section .note-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tasting-section .note-grid article {
+    border-right: 0;
+    border-bottom: 1px solid var(--gold-border);
+  }
+
+  .tasting-section .note-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .uses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+
+  .product {
+    padding: 28px 22px;
+  }
+
+  .product > img {
+    height: 280px;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-grid img {
+    height: 230px;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 26px 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    text-align: center;
+  }
+
+  .brand-col {
+    margin: 0 auto;
+  }
+
+  .site-footer a {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+}
