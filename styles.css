@@ -1,5 +1,155 @@
+:root {
+  --blue: #001263;
+  --gold: #b98a3d;
+  --cream: #f7f4ee;
+  --ink: #07134d;
 
-:root{--blue:#001263;--gold:#b98a3d;--cream:#f7f4ee;--ink:#07134d;--serif:'Cormorant Garamond',serif;--sans:'Montserrat',sans-serif}
-*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:var(--sans)}img{max-width:100%;display:block}a{text-decoration:none;color:inherit}.topbar{height:31px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;gap:28px;font:600 12px var(--serif);letter-spacing:.15em}.topbar b{color:var(--gold)}.greek-line{height:13px;background:repeating-linear-gradient(90deg,var(--gold) 0 4px,var(--blue) 4px 8px);border-block:2px solid var(--blue)}.site-header{height:115px;display:grid;grid-template-columns:1fr 230px 1fr;align-items:center;padding:0 7%;position:sticky;top:0;background:#fff;z-index:20;border-bottom:1px solid #eee}.logo{grid-column:2;width:190px;justify-self:center}.nav{display:flex;gap:28px;font-size:12px;font-weight:600;text-transform:uppercase}.nav-left{grid-column:1;grid-row:1}.nav-right{grid-column:3;grid-row:1;justify-content:flex-end}.hero{height:510px;position:relative;overflow:hidden}.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.48;mix-blend-mode:multiply}.hero-fade{position:absolute;inset:0;background:linear-gradient(90deg,#fffffff7 0%,#ffffffe6 47%,#ffffff40 70%)}.hero-copy{position:absolute;left:10%;top:48px;width:46%;text-align:center;z-index:2}.overline{font:600 22px var(--serif);letter-spacing:.15em;margin:0}.gold{color:var(--gold)}h1{font:600 42px/1 var(--serif);margin:8px 0;color:var(--blue)}h1 span{font-size:34px}.fr,.caps,.origin{font:600 12px var(--serif);letter-spacing:.2em}.script{font:400 38px 'Parisienne',cursive;margin:18px 0}.btn{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;font-size:12px;font-weight:700;border:0;margin-top:15px}.hero-bottle{position:absolute;height:500px;right:25%;bottom:0;z-index:3}.story-notes{display:grid;grid-template-columns:1fr 1fr;padding:32px 6%}.story{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;padding-right:40px;border-right:1px solid #ddd}.story img{width:140px}.story h2,.products h2,.page-title h1{font:600 30px var(--serif);text-align:center}.story p{font-size:11px;line-height:1.75}.signature{font:400 23px 'Parisienne',cursive!important}.ornament{text-align:center;color:var(--gold)}.notes{padding-left:40px}.notes h3,.tasting h2{text-align:center;font:600 20px var(--serif)}.note-grid{display:grid;grid-template-columns:repeat(3,1fr)}.note-grid>div{text-align:center;padding:15px;border-right:1px solid #ddd}.note-grid>div:last-child{border-right:0}.icon{font-size:38px}.products{padding:22px 12%;background:#faf8f3}.product-grid,.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.product{display:grid;grid-template-columns:160px 1fr;border:1px solid #d9c5a3;padding:15px;background:white}.product img,.shop-card img{height:180px;margin:auto}.price{font:600 25px var(--serif)}.page-title{padding:45px 20px 25px;text-align:center}.page-title h1{font-size:42px}.split,.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:50px;padding:35px 9%}.prose,.split p{font:16px/1.8 var(--serif)}.line-art{height:420px;width:100%;object-fit:cover;mix-blend-mode:multiply}.values{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 8%;background:var(--cream)}.values article{text-align:center;padding:20px;border-right:1px solid #d9c5a3}.values article:last-child{border-right:0}.values span{font-size:32px;color:var(--gold)}.checks{font:15px/1.9 var(--serif)}.tasting{margin:20px 10% 40px;padding:25px;border:1px solid #d9c5a3}.shop-grid{grid-template-columns:repeat(2,minmax(280px,360px));justify-content:center;padding:20px 8% 50px}.shop-card{text-align:center;border:1px solid #d9c5a3;padding:25px}.shop-card img{height:280px}.recipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:20px 10% 45px}.recipe-grid article{border:1px solid #d9c5a3}.recipe-photo{height:180px}.salad{background:linear-gradient(135deg,#6d8f45,#e9d8bd)}.veggies{background:linear-gradient(135deg,#b06d28,#6a7f32)}.fish{background:linear-gradient(135deg,#c7aa7a,#6c8ca0)}.bread{background:linear-gradient(135deg,#b98a3d,#e8d2a8)}.chicken{background:linear-gradient(135deg,#d4a73f,#5a7c38)}.soup{background:linear-gradient(135deg,#9b5b22,#d9a95c)}.recipe-grid h2,.recipe-grid p{padding:0 15px}.contact-form{display:grid;gap:12px}.contact-form label{display:grid;gap:5px}.contact-form input,.contact-form textarea{padding:11px;border:1px solid #d9c5a3}.site-footer{background:var(--blue);color:white}.footer-main{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:40px;padding:30px 9%}.brand-col{text-align:center}.brand-col img{width:150px;margin:auto;filter:brightness(4)}.site-footer a{display:block;font:13px/1.5 var(--serif)}.site-footer p{font:13px/1.5 var(--serif)}.newsletter{display:flex}.newsletter input{padding:10px;border:0;width:100%}.newsletter button{width:40px;border:0;background:var(--gold);color:white}.footer-bottom{border-top:1px solid #ffffff55;display:flex;justify-content:space-between;padding:10px 6%;font:11px var(--serif)}
-@media(max-width:850px){.site-header{grid-template-columns:1fr;height:90px}.logo{grid-column:1}.nav{display:none}.hero{height:760px}.hero-copy{left:6%;width:88%}.hero-bottle{height:300px;right:50%;transform:translateX(50%)}.story-notes,.split,.contact-layout{grid-template-columns:1fr}.story{border:0}.notes{padding:20px 0}.product-grid,.shop-grid{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}.recipe-grid{grid-template-columns:1fr 1fr}.footer-main{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.topbar{font-size:9px;gap:10px}.story{grid-template-columns:1fr;text-align:center}.story img{margin:auto}.note-grid,.values,.recipe-grid,.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:8px;text-align:center}}
+  --serif: "Cormorant Garamond", serif;
+  --sans: "Montserrat", sans-serif;
+}
+
+/* -------------------------
+   Base
+------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -------------------------
+   Top Bar
+------------------------- */
+
+.topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  height: 31px;
+
+  background: var(--blue);
+  color: white;
+
+  font: 600 12px var(--serif);
+  letter-spacing: .15em;
+}
+
+.topbar b {
+  color: var(--gold);
+}
+
+/* -------------------------
+   Greek Border
+------------------------- */
+
+.greek-line {
+  height: 13px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--gold) 0 4px,
+      var(--blue) 4px 8px
+    );
+
+  border-top: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+/* -------------------------
+   Header
+------------------------- */
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr 230px 1fr;
+  align-items: center;
+
+  height: 115px;
+  padding: 0 7%;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  grid-column: 2;
+  width: 190px;
+  justify-self: center;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-left {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.nav-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-content: flex-end;
+}
+
+/* -------------------------
+   Hero
+------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  height: 510px;
+}
+
+.hero-art {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: .48;
+  mix-blend-mode: multiply;
+}
+
+.hero-copy {
+  position: absolute;
+  left: 10%;
+  top: 48px;
+
+  width: 46%;
+  z-index: 2;
+
+  text-align: center;
+}
