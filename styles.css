@@ -616,8 +616,6 @@ h1 span {
 .brand-col img {
   width: 150px;
   margin: auto;
-
-  filter: brightness(4);
 }
 
 .site-footer a {
