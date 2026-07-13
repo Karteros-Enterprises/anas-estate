@@ -71,22 +71,22 @@
       class="nav nav-left"
       aria-label="Primary navigation"
     >
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="our-story.html">
+      <a href="#story">
         Our Story
       </a>
 
-      <a href="our-olive-oil.html">
-        Our Olive Oil
+      <a href="#quality">
+        Quality
+      </a>
+
+      <a href="#harvest">
+        Harvest
       </a>
     </nav>
 
     <a
       class="logo"
-      href="index.html"
+      href="#top"
       aria-label="Ana’s Estate home"
     >
       <img
@@ -99,18 +99,20 @@
       class="nav nav-right"
       aria-label="Secondary navigation"
     >
-      <a href="shop.html">
+      <a href="#products">
         Shop
       </a>
 
-      <a href="recipes.html">
+      <a href="#recipes">
         Recipes
       </a>
 
-      <a href="contact.html">
+      <a href="#contact">
         Contact
       </a>
     </nav>
+
+    <!-- Mobile menu button -->
 
     <button
       class="menu-toggle"
@@ -124,43 +126,48 @@
       <span></span>
     </button>
 
+    <!-- Mobile navigation -->
+
     <nav
       class="mobile-nav"
       id="mobile-menu"
       aria-label="Mobile navigation"
     >
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="our-story.html">
+      <a href="#story">
         Our Story
       </a>
 
-      <a href="our-olive-oil.html">
-        Our Olive Oil
+      <a href="#quality">
+        Quality
       </a>
 
-      <a href="shop.html">
+      <a href="#harvest">
+        Harvest
+      </a>
+
+      <a href="#products">
         Shop
       </a>
 
-      <a href="recipes.html">
+      <a href="#recipes">
         Recipes
       </a>
 
-      <a href="contact.html">
+      <a href="#contact">
         Contact
       </a>
     </nav>
 
   </header>
 
-  <main>
+  <main id="top">
 
     <!-- Hero -->
 
-    <section class="hero">
+    <section
+      class="hero"
+      aria-labelledby="hero-title"
+    >
 
       <img
         class="hero-art"
@@ -177,12 +184,13 @@
       <div class="hero-copy">
 
         <p class="overline gold">
-          Early Harvest
+          2025 Early Harvest
         </p>
 
-        <h1>
+        <h1 id="hero-title">
           PDO Kalamata
           <br>
+
           <span>
             Extra Virgin Olive Oil
           </span>
@@ -208,7 +216,7 @@
 
         <a
           class="btn"
-          href="shop.html"
+          href="#products"
         >
           Shop Now
         </a>
@@ -218,67 +226,37 @@
       <img
         class="hero-bottle"
         src="assets/hero-bottle.png"
-        alt="Ana’s Estate 750 ml bottle"
+        alt="Ana’s Estate 750 ml Extra Virgin Olive Oil bottle"
       >
 
     </section>
 
-    <!-- Story and tasting notes -->
+    <!-- Family story -->
 
-    <section class="story-notes">
+    <section
+      class="story-section"
+      id="story"
+      aria-labelledby="story-title"
+    >
 
-      <article class="story">
+      <div class="story-portrait">
 
         <img
           src="assets/story-portrait.png"
-          alt="Ana’s Estate portrait"
+          alt="Ana’s Estate family portrait"
         >
 
-        <div>
+      </div>
 
-          <h2>
-            Our Family Story
-          </h2>
+      <div class="story-content">
 
-          <div
-            class="ornament"
-            aria-hidden="true"
-          >
-            — ◇ —
-          </div>
+        <p class="section-label">
+          Our Heritage
+        </p>
 
-          <p>
-            From our family groves in Kalamata, Greece,
-            Ana’s Estate Extra Virgin Olive Oil is produced
-            exclusively from hand-harvested Koroneiki olives.
-          </p>
-
-          <p>
-            The olives are cold extracted within hours of
-            harvest to preserve their exceptional flavour,
-            aroma and natural quality.
-          </p>
-
-          <p class="signature">
-            The Karteros Family
-          </p>
-
-          <a
-            class="btn"
-            href="our-story.html"
-          >
-            Our Story
-          </a>
-
-        </div>
-
-      </article>
-
-      <article class="notes">
-
-        <h3>
-          Tasting Notes
-        </h3>
+        <h2 id="story-title">
+          Our Family Story
+        </h2>
 
         <div
           class="ornament"
@@ -287,84 +265,519 @@
           — ◇ —
         </div>
 
-        <div class="note-grid">
+        <p>
+          From our family groves in Kalamata, Greece,
+          Ana’s Estate Extra Virgin Olive Oil is produced
+          exclusively from carefully selected Koroneiki olives.
+        </p>
 
-          <div>
+        <p>
+          Our olives are harvested with care and cold extracted
+          within hours of harvest to preserve their exceptional
+          flavour, fresh aroma and natural quality.
+        </p>
 
-            <div
-              class="icon"
-              aria-hidden="true"
-            >
-              ❧
-            </div>
+        <p>
+          Every bottle reflects our family’s connection to the
+          land, our Greek heritage and our commitment to producing
+          authentic Kalamata olive oil.
+        </p>
 
-            <b>
-              Fruity
-            </b>
+        <p class="signature">
+          The Karteros Family
+        </p>
 
-            <p>
-              Vibrant and fresh with a fruity character.
-            </p>
+      </div>
 
-          </div>
+    </section>
 
-          <div>
+    <!-- Kalamata and product origin -->
 
-            <div
-              class="icon"
-              aria-hidden="true"
-            >
-              ✤
-            </div>
+    <section
+      class="origin-section"
+      id="quality"
+      aria-labelledby="origin-title"
+    >
 
-            <b>
-              Aroma
-            </b>
+      <div class="section-heading">
 
-            <p>
-              Fresh grass, herbs and green tomato.
-            </p>
+        <p class="section-label">
+          From Kalamata, Greece
+        </p>
 
-          </div>
+        <h2 id="origin-title">
+          Rooted in Place
+        </h2>
 
-          <div>
-
-            <div
-              class="icon"
-              aria-hidden="true"
-            >
-              ❦
-            </div>
-
-            <b>
-              Finish
-            </b>
-
-            <p>
-              Balanced bitterness with a peppery finish.
-            </p>
-
-          </div>
-
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
         </div>
 
-      </article>
+      </div>
+
+      <img
+        class="origin-art"
+        src="assets/grove-line-art.png"
+        alt="Line-art illustration of the Ana’s Estate olive groves in Kalamata"
+      >
+
+      <div class="origin-grid">
+
+        <article>
+
+          <div
+            class="icon"
+            aria-hidden="true"
+          >
+            ◇
+          </div>
+
+          <h3>
+            PDO Kalamata
+          </h3>
+
+          <p>
+            Protected Designation of Origin certification connects
+            our olive oil directly to the Kalamata region and its
+            recognized production standards.
+          </p>
+
+        </article>
+
+        <article>
+
+          <div
+            class="icon"
+            aria-hidden="true"
+          >
+            ❧
+          </div>
+
+          <h3>
+            Koroneiki Olives
+          </h3>
+
+          <p>
+            Small, aromatic Koroneiki olives produce a vibrant oil
+            with fruity character, balanced bitterness and a
+            distinctive peppery finish.
+          </p>
+
+        </article>
+
+        <article>
+
+          <div
+            class="icon"
+            aria-hidden="true"
+          >
+            ♧
+          </div>
+
+          <h3>
+            Single Estate
+          </h3>
+
+          <p>
+            Our olives come from our family groves, allowing us to
+            maintain traceability and consistency from harvest to
+            bottle.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Harvest process -->
+
+    <section
+      class="harvest-section"
+      id="harvest"
+      aria-labelledby="harvest-title"
+    >
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          From Grove to Bottle
+        </p>
+
+        <h2 id="harvest-title">
+          Our Harvest Process
+        </h2>
+
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
+        </div>
+
+      </div>
+
+      <img
+        class="harvest-art"
+        src="assets/harvest-line-art.png"
+        alt="Line-art illustration of the Koroneiki olive harvest"
+      >
+
+      <div class="harvest-steps">
+
+        <article>
+
+          <span class="step-number">
+            01
+          </span>
+
+          <h3>
+            Early Harvest
+          </h3>
+
+          <p>
+            The olives are gathered during the early harvest period
+            to capture fresh flavour, aroma and natural intensity.
+          </p>
+
+        </article>
+
+        <article>
+
+          <span class="step-number">
+            02
+          </span>
+
+          <h3>
+            Carefully Gathered
+          </h3>
+
+          <p>
+            Our olives are handled carefully to protect the fruit
+            and preserve the quality of the oil they produce.
+          </p>
+
+        </article>
+
+        <article>
+
+          <span class="step-number">
+            03
+          </span>
+
+          <h3>
+            Cold Extracted
+          </h3>
+
+          <p>
+            Extraction takes place within hours of harvest at a
+            controlled temperature to preserve flavour and freshness.
+          </p>
+
+        </article>
+
+        <article>
+
+          <span class="step-number">
+            04
+          </span>
+
+          <h3>
+            Packed with Care
+          </h3>
+
+          <p>
+            The finished oil is protected from heat and light before
+            being prepared for its journey from Greece to Canada.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Quality details -->
+
+    <section
+      class="quality-section"
+      aria-labelledby="quality-title"
+    >
+
+      <div class="quality-intro">
+
+        <p class="section-label gold">
+          Ana’s Estate Quality
+        </p>
+
+        <h2 id="quality-title">
+          Authenticity in Every Drop
+        </h2>
+
+        <p>
+          Our olive oil is defined by its origin, olive variety,
+          harvest timing and carefully controlled production.
+        </p>
+
+      </div>
+
+      <div class="quality-grid">
+
+        <article>
+          <strong>PDO</strong>
+          <span>Kalamata Certified</span>
+        </article>
+
+        <article>
+          <strong>100%</strong>
+          <span>Koroneiki Olives</span>
+        </article>
+
+        <article>
+          <strong>Single</strong>
+          <span>Estate Origin</span>
+        </article>
+
+        <article>
+          <strong>Early</strong>
+          <span>Harvest</span>
+        </article>
+
+        <article>
+          <strong>Cold</strong>
+          <span>Extracted</span>
+        </article>
+
+        <article>
+          <strong>2025</strong>
+          <span>Harvest Year</span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Tasting notes -->
+
+    <section
+      class="tasting-section"
+      aria-labelledby="tasting-title"
+    >
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          Sensory Profile
+        </p>
+
+        <h2 id="tasting-title">
+          Tasting Notes
+        </h2>
+
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
+        </div>
+
+      </div>
+
+      <div class="note-grid">
+
+        <article>
+
+          <div
+            class="icon"
+            aria-hidden="true"
+          >
+            ❧
+          </div>
+
+          <h3>
+            Fruity
+          </h3>
+
+          <p>
+            Vibrant and fresh with a lively fruity character.
+          </p>
+
+        </article>
+
+        <article>
+
+          <div
+            class="icon"
+            aria-hidden="true"
+          >
+            ✤
+          </div>
+
+          <h3>
+            Aroma
+          </h3>
+
+          <p>
+            Fresh grass, herbs and green tomato.
+          </p>
+
+        </article>
+
+        <article>
+
+          <div
+            class="icon"
+            aria-hidden="true"
+          >
+            ❦
+          </div>
+
+          <h3>
+            Finish
+          </h3>
+
+          <p>
+            Balanced bitterness with a clean peppery finish.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Perfect for -->
+
+    <section
+      class="uses-section"
+      aria-labelledby="uses-title"
+    >
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          In the Kitchen
+        </p>
+
+        <h2 id="uses-title">
+          Perfect For
+        </h2>
+
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
+        </div>
+
+      </div>
+
+      <div class="uses-grid">
+
+        <article>
+          <img
+            src="assets/icon-salads.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <h3>
+            Salads
+          </h3>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-vegetables.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <h3>
+            Grilled Vegetables
+          </h3>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-seafood.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <h3>
+            Seafood
+          </h3>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-bread.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <h3>
+            Bread Dipping
+          </h3>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-meats.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <h3>
+            Meats
+          </h3>
+        </article>
+
+        <article>
+          <img
+            src="assets/icon-soups.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <h3>
+            Soups
+          </h3>
+        </article>
+
+      </div>
 
     </section>
 
     <!-- Products -->
 
-    <section class="products">
+    <section
+      class="products"
+      id="products"
+      aria-labelledby="products-title"
+    >
 
-      <h2>
-        Our Olive Oil
-      </h2>
+      <div class="section-heading">
 
-      <div
-        class="ornament"
-        aria-hidden="true"
-      >
-        — ◇ —
+        <p class="section-label">
+          Shop Ana’s Estate
+        </p>
+
+        <h2 id="products-title">
+          Our Olive Oil
+        </h2>
+
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
+        </div>
+
       </div>
 
       <div class="product-grid">
@@ -372,32 +785,65 @@
         <article class="product">
 
           <img
-            src="assets/tin-5l.png"
-            alt="Ana’s Estate 5 litre olive oil tin"
+            src="assets/hero-bottle.png"
+            alt="Ana’s Estate 750 ml Extra Virgin Olive Oil bottle"
           >
 
           <div>
 
+            <p class="product-format">
+              750 ml Bottle
+            </p>
+
             <h3>
-              5L Tin
+              Everyday Estate Bottle
             </h3>
 
             <ul>
-              <li>
-                Koroneiki Monovarietal
-              </li>
+              <li>Koroneiki Monovarietal</li>
+              <li>Early Harvest</li>
+              <li>Cold Extracted</li>
+              <li>PDO Kalamata</li>
+            </ul>
 
-              <li>
-                Early Harvest
-              </li>
+            <div class="price">
+              Add Price
+            </div>
 
-              <li>
-                Cold Extracted
-              </li>
+            <a
+              class="btn stripe"
+              href="#"
+              data-product="bottle"
+            >
+              Buy Now
+            </a>
 
-              <li>
-                PDO Kalamata
-              </li>
+          </div>
+
+        </article>
+
+        <article class="product">
+
+          <img
+            src="assets/tin-5l.png"
+            alt="Ana’s Estate 5 litre Extra Virgin Olive Oil tin"
+          >
+
+          <div>
+
+            <p class="product-format">
+              5L Tin
+            </p>
+
+            <h3>
+              Family and Kitchen Format
+            </h3>
+
+            <ul>
+              <li>Koroneiki Monovarietal</li>
+              <li>Early Harvest</li>
+              <li>Cold Extracted</li>
+              <li>PDO Kalamata</li>
             </ul>
 
             <div class="price">
@@ -420,31 +866,24 @@
 
           <img
             src="assets/tin-16l.png"
-            alt="Ana’s Estate 16 litre olive oil tin"
+            alt="Ana’s Estate 16 litre Extra Virgin Olive Oil tin"
           >
 
           <div>
 
-            <h3>
+            <p class="product-format">
               16L Tin
+            </p>
+
+            <h3>
+              Foodservice and Cellar Format
             </h3>
 
             <ul>
-              <li>
-                Koroneiki Monovarietal
-              </li>
-
-              <li>
-                Early Harvest
-              </li>
-
-              <li>
-                Cold Extracted
-              </li>
-
-              <li>
-                PDO Kalamata
-              </li>
+              <li>Koroneiki Monovarietal</li>
+              <li>Early Harvest</li>
+              <li>Cold Extracted</li>
+              <li>PDO Kalamata</li>
             </ul>
 
             <div class="price">
@@ -464,6 +903,241 @@
         </article>
 
       </div>
+
+    </section>
+
+    <!-- Recipes preview -->
+
+    <section
+      class="recipes-section"
+      id="recipes"
+      aria-labelledby="recipes-title"
+    >
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          Mediterranean Inspiration
+        </p>
+
+        <h2 id="recipes-title">
+          From Our Table
+        </h2>
+
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
+        </div>
+
+        <p>
+          Simple ways to enjoy Ana’s Estate Extra Virgin Olive Oil.
+        </p>
+
+      </div>
+
+      <div class="recipe-grid">
+
+        <article>
+
+          <img
+            src="assets/recipe-greek-salad.jpg"
+            alt="Traditional Greek salad dressed with olive oil"
+          >
+
+          <div class="recipe-content">
+
+            <h3>
+              Traditional Greek Salad
+            </h3>
+
+            <p>
+              Tomatoes, cucumber, feta, oregano and a generous finish
+              of Ana’s Estate olive oil.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article>
+
+          <img
+            src="assets/recipe-bread-dipping.jpg"
+            alt="Rustic bread served with extra virgin olive oil"
+          >
+
+          <div class="recipe-content">
+
+            <h3>
+              Greek Bread Dipping Oil
+            </h3>
+
+            <p>
+              Extra virgin olive oil with oregano, herbs and freshly
+              ground black pepper.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article>
+
+          <img
+            src="assets/recipe-roasted-vegetables.jpg"
+            alt="Mediterranean roasted vegetables with olive oil"
+          >
+
+          <div class="recipe-content">
+
+            <h3>
+              Roasted Mediterranean Vegetables
+            </h3>
+
+            <p>
+              Seasonal vegetables roasted with olive oil, garlic and
+              fresh herbs.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Contact and wholesale -->
+
+    <section
+      class="contact-section"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+
+      <div class="contact-copy">
+
+        <p class="section-label">
+          Contact and Wholesale
+        </p>
+
+        <h2 id="contact-title">
+          Bring Ana’s Estate to Your Customers
+        </h2>
+
+        <div
+          class="ornament"
+          aria-hidden="true"
+        >
+          — ◇ —
+        </div>
+
+        <p>
+          Ana’s Estate is available for select restaurants,
+          specialty grocers, farm markets and food retailers.
+        </p>
+
+        <p>
+          For product questions, wholesale inquiries or retail
+          partnerships, send us a message.
+        </p>
+
+        <div class="contact-details">
+
+          <p>
+            <strong>Email</strong>
+            <br>
+
+            <a href="mailto:info@anasestate.com">
+              info@anasestate.com
+            </a>
+          </p>
+
+          <p>
+            <strong>Imported by</strong>
+            <br>
+            Karteros Enterprises
+            <br>
+            Brampton, Ontario, Canada
+          </p>
+
+        </div>
+
+      </div>
+
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/info@anasestate.com"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Ana’s Estate website inquiry"
+        >
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
+
+        <label for="contact-name">
+          Name
+        </label>
+
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          autocomplete="name"
+          required
+        >
+
+        <label for="contact-email">
+          Email
+        </label>
+
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        >
+
+        <label for="contact-subject">
+          Subject
+        </label>
+
+        <input
+          id="contact-subject"
+          type="text"
+          name="subject"
+        >
+
+        <label for="contact-message">
+          Message
+        </label>
+
+        <textarea
+          id="contact-message"
+          name="message"
+          rows="6"
+          required
+        ></textarea>
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          Send Message
+        </button>
+
+      </form>
 
     </section>
 
@@ -501,27 +1175,27 @@
       <div>
 
         <h4>
-          Quick Links
+          Explore
         </h4>
 
-        <a href="our-story.html">
+        <a href="#story">
           Our Story
         </a>
 
-        <a href="our-olive-oil.html">
-          Our Olive Oil
+        <a href="#quality">
+          Quality
         </a>
 
-        <a href="shop.html">
+        <a href="#harvest">
+          Harvest
+        </a>
+
+        <a href="#products">
           Shop
         </a>
 
-        <a href="recipes.html">
+        <a href="#recipes">
           Recipes
-        </a>
-
-        <a href="contact.html">
-          Contact
         </a>
 
       </div>
@@ -532,15 +1206,15 @@
           Customer Care
         </h4>
 
-        <a href="contact.html">
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a href="#contact">
           Shipping and Delivery
         </a>
 
-        <a href="contact.html">
-          Returns and Refunds
-        </a>
-
-        <a href="contact.html">
+        <a href="#contact">
           Wholesale Inquiries
         </a>
 
@@ -561,8 +1235,8 @@
         </h4>
 
         <p>
-          Sign up for recipes, offers and news from our
-          family groves.
+          Sign up for recipes, harvest updates and news from
+          our family groves.
         </p>
 
         <form
@@ -570,6 +1244,12 @@
           action="https://formsubmit.co/info@anasestate.com"
           method="POST"
         >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Ana’s Estate newsletter signup"
+          >
 
           <label
             for="newsletter-email"
