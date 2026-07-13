@@ -1,22 +1,50 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="88"
-  height="67"
-  viewBox="0 0 88 67"
+width="112"
+  height="68"
+  viewBox="0 0 112 68"
   shape-rendering="crispEdges"
 >
-  <!-- Background -->
-  <rect width="88" height="67" fill="#141844" />
 
+  <!-- Deep Blue Background -->
+  <rect width="112" height="68" fill="#141844" />
+
+  <!-- Gold Pattern Grid Structure -->
   <g fill="#9C8350">
-    <!-- Top and bottom continuous borders -->
-    <rect x="0" y="6" width="88" height="8" />
-    <rect x="0" y="53" width="88" height="8" />
+    <!-- Top & Bottom Frame Bars -->
+    <rect x="0" y="6" width="112" height="8" />
+    <rect x="0" y="54" width="112" height="8" />
 
-    <!-- Continuous Interlocking Meander Pattern -->
-    <path d="M 0,33.5 H 17 V 21 H 35 V 46 H 23 V 33.5 H 29" />
-    <path d="M 44,33.5 H 61 V 46 H 79 V 21 H 67 V 33.5 H 73" />
-    <path d="M 44,33.5 V 46 H 0" />
-    <path d="M 44,33.5 V 21 H 88" />
+    <!-- LEFT BLOCK: Left-facing spiral loop (Width: 56px) -->
+    <!-- Entrance/Exit stem bridge -->
+    <rect x="0" y="30" width="16" height="8" />
+    <!-- Downward outer left wall -->
+    <rect x="8" y="30" width="8" height="24" />
+    <!-- Bottom horizontal floor -->
+    <rect x="8" y="46" width="40" height="8" />
+    <!-- Upward right outer wall -->
+    <rect x="40" y="22" width="8" height="32" />
+    <!-- Top horizontal ceiling -->
+    <rect x="24" y="22" width="24" height="8" />
+    <!-- Inner central downward hook -->
+    <rect x="24" y="22" width="8" height="16" />
+    <!-- Inner core center block -->
+    <rect x="24" y="38" width="16" height="8" />
+
+    <!-- RIGHT BLOCK: Right-facing spiral loop (Shifted exactly by 56px) -->
+    <!-- Center connecting bridge stem -->
+    <rect x="56" y="30" width="16" height="8" />
+    <!-- Upward outer left wall -->
+    <rect x="56" y="14" width="8" height="24" />
+    <!-- Top horizontal ceiling -->
+    <rect x="56" y="14" width="40" height="8" />
+    <!-- Downward right outer wall -->
+    <rect x="88" y="14" width="8" height="32" />
+    <!-- Bottom horizontal floor -->
+    <rect x="72" y="38" width="24" height="8" />
+    <!-- Inner central upward hook -->
+    <rect x="72" y="30" width="8" height="16" />
+    <!-- Inner core center block -->
+    <rect x="72" y="22" width="16" height="8" />
   </g>
 </svg>
