@@ -429,7 +429,7 @@ h3 {
   color: var(--blue);
 
   font: 600 clamp(48px, 6vw, 82px) / 0.95 var(--serif);
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
   text-transform: uppercase;
 }
 
