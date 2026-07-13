@@ -47,7 +47,7 @@ textarea {
 }
 
 /* ==================================================
-   Top announcement bar
+   Announcement bar
 ================================================== */
 
 .topbar {
@@ -72,7 +72,7 @@ textarea {
 }
 
 /* ==================================================
-   Greek key border
+   Greek key divider
 ================================================== */
 
 .greek-line {
@@ -90,7 +90,7 @@ textarea {
 }
 
 /* ==================================================
-   Header and navigation
+   Header and desktop navigation
 ================================================== */
 
 .site-header {
@@ -111,9 +111,7 @@ textarea {
 
 .logo {
   grid-column: 2;
-
   width: 190px;
-
   justify-self: center;
 }
 
@@ -147,12 +145,11 @@ textarea {
 .nav-right {
   grid-column: 3;
   grid-row: 1;
-
   justify-content: flex-end;
 }
 
 /* ==================================================
-   Responsive menu
+   Mobile navigation
 ================================================== */
 
 .menu-toggle {
@@ -192,9 +189,7 @@ textarea {
 
 .hero {
   position: relative;
-
   height: 510px;
-
   overflow: hidden;
 }
 
@@ -219,7 +214,7 @@ textarea {
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.97) 0%,
-      rgba(255, 255, 255, 0.90) 47%,
+      rgba(255, 255, 255, 0.9) 47%,
       rgba(255, 255, 255, 0.25) 70%
     );
 }
@@ -707,21 +702,9 @@ h1 span {
 
 @media (max-width: 850px) {
   .site-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
 
     height: 90px;
-  }
-
-  .logo {
-    grid-column: 1;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .site-header {
-    grid-template-columns: 1fr auto;
     padding: 0 24px;
   }
 
@@ -730,6 +713,10 @@ h1 span {
     grid-row: 1;
 
     justify-self: start;
+  }
+
+  .nav {
+    display: none;
   }
 
   .menu-toggle {
@@ -855,14 +842,10 @@ h1 span {
 
   .greek-line {
     height: 14px;
-  }
+    background-size: auto 9px;
 
-  .greek-line::before {
-    inset: 2px 0;
-
-    background-size:
-      20px 10px,
-      10px 10px;
+    border-top-width: 1.5px;
+    border-bottom-width: 1.5px;
   }
 
   .hero-copy h1 {
