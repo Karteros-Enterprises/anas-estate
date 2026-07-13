@@ -1,34 +1,22 @@
 <svg
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="http://w3.org"
   width="88"
   height="67"
   viewBox="0 0 88 67"
   shape-rendering="crispEdges"
 >
-  <!-- Background -->
+  <!-- Background Color -->
   <rect width="88" height="67" fill="#141844" />
 
-  <g fill="#9C8350">
-    <!-- Top and bottom continuous borders -->
-    <rect x="0" y="6" width="88" height="8" />
-    <rect x="0" y="53" width="88" height="8" />
+  <g fill="none" stroke="#9C8350" stroke-width="6">
+    <!-- Top and bottom solid frame bars -->
+    <line x1="0" y1="9" x2="88" y2="9" />
+    <line x1="0" y1="58" x2="58" y2="58" />
 
-    <!-- Meander Block 1 (Left Side) -->
-    <!-- Enters from left edge, spirals inward, spirals back out -->
-    <rect x="0" y="27" width="20" height="6" />
-    <rect x="14" y="21" width="6" height="12" />
-    <rect x="14" y="21" width="20" height="6" />
-    <rect x="28" y="21" width="6" height="26" />
-    <rect x="0" y="41" width="34" height="6" />
-    <rect x="0" y="14" width="6" height="33" />
-    
-    <!-- Meander Block 2 (Right Side - Exact clone shifted by 44px) -->
-    <!-- Connects seamlessly with Block 1 and the next repeating image -->
-    <rect x="44" y="27" width="20" height="6" />
-    <rect x="58" y="21" width="6" height="12" />
-    <rect x="58" y="21" width="20" height="6" />
-    <rect x="72" y="21" width="6" height="26" />
-    <rect x="44" y="41" width="34" height="6" />
-    <rect x="44" y="14" width="6" height="33" />
+    <!-- Continuous Interlocking Meander Pattern -->
+    <path d="M 0,33.5 H 17 V 21 H 35 V 46 H 23 V 33.5 H 29" />
+    <path d="M 44,33.5 H 61 V 46 H 79 V 21 H 67 V 33.5 H 73" />
+    <path d="M 44,33.5 V 46 H 0" />
+    <path d="M 44,33.5 V 21 H 88" />
   </g>
 </svg>
