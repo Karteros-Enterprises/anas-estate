@@ -1,36 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="64"
-     height="18"
-     viewBox="0 0 64 18">
-
-  <rect width="64" height="18" fill="#001263"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="30"
+  height="30"
+  viewBox="0 0 30 30"
+>
+  <rect
+    width="30"
+    height="30"
+    fill="#001263"
+  />
 
   <path
     d="
-      M0 2 H64
-      M0 16 H64
+      M1 2 H29
+      M1 28 H29
 
-      M0 5
-      H26
-      V13
-      H8
+      M2 5
+      H27
+      V25
+      H5
       V9
-      H21
-      V5
-      H32
-
-      M32 5
-      H58
+      H22
+      V21
+      H9
       V13
-      H40
-      V9
-      H53
-      V5
-      H64
+      H18
+      V17
+      H13
     "
     fill="none"
     stroke="#B98A3D"
-    stroke-width="1.8"
+    stroke-width="3"
     stroke-linecap="square"
     stroke-linejoin="miter"
   />
