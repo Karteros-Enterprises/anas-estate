@@ -1,38 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="40"
-     height="18"
-     viewBox="0 0 40 18"
-     shape-rendering="crispEdges">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="40"
+  height="16"
+  viewBox="0 0 40 16"
+  shape-rendering="crispEdges"
+>
+  <rect width="40" height="16" fill="#001263" />
 
-  <rect width="40" height="18" fill="#001263"/>
+  <g
+    fill="none"
+    stroke="#B98A3D"
+    stroke-width="2"
+    stroke-linecap="butt"
+    stroke-linejoin="miter"
+  >
+    <!-- Top and bottom rails -->
+    <path d="M0 1 H40" />
+    <path d="M0 15 H40" />
 
-  <g fill="#B98A3D">
+    <!-- Left meander -->
+    <path
+      d="
+        M0 4
+        H17
+        V12
+        H4
+        V6
+        H13
+        V10
+        H8
+        V8
+      "
+    />
 
-    <!-- top / bottom -->
-    <rect x="0" y="0" width="40" height="2"/>
-    <rect x="0" y="16" width="40" height="2"/>
+    <!-- Right meander -->
+    <path
+      d="
+        M20 4
+        H37
+        V12
+        H24
+        V6
+        H33
+        V10
+        H28
+        V8
+      "
+    />
 
-    <!-- left key -->
-    <rect x="0" y="2" width="18" height="2"/>
-    <rect x="16" y="2" width="2" height="12"/>
-    <rect x="4" y="12" width="14" height="2"/>
-    <rect x="4" y="6" width="2" height="8"/>
-    <rect x="4" y="6" width="10" height="2"/>
-    <rect x="12" y="8" width="2" height="4"/>
-    <rect x="8" y="10" width="6" height="2"/>
-
-    <!-- centre divider -->
-    <rect x="19" y="2" width="2" height="14"/>
-
-    <!-- right key -->
-    <rect x="22" y="2" width="18" height="2"/>
-    <rect x="22" y="2" width="2" height="12"/>
-    <rect x="22" y="12" width="14" height="2"/>
-    <rect x="34" y="6" width="2" height="8"/>
-    <rect x="26" y="6" width="10" height="2"/>
-    <rect x="26" y="8" width="2" height="4"/>
-    <rect x="26" y="10" width="6" height="2"/>
-
+    <!-- Seam connectors -->
+    <path d="M19 2 V14" />
+    <path d="M39 2 V14" />
   </g>
-
 </svg>
