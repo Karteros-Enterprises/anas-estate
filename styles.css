@@ -61,14 +61,14 @@ a {
 
 .greek-line {
   width: 100%;
-  height: 18px;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='16' viewBox='0 0 48 16'%3E%3Cpath d='M0 2H48 M0 14H48 M0 6H12V10H4V6 M12 10H24V6H16V10 M24 6H36V10H28V6 M36 10H48V6H40V10' fill='none' stroke='%23001263' stroke-width='2' stroke-linejoin='miter'/%3E%3C/svg%3E");
+  height: 16px;
+  background-color: var(--blue);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='16' viewBox='0 0 40 16'%3E%3Cpath d='M0 3H17V13H7V8H12 M20 13H37V3H27V8H32 M40 3H37' fill='none' stroke='%23b98a3d' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   background-position: center;
-  background-size: 48px 16px;
-  border-top: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
+  background-size: 40px 16px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
 }
 
 /* -------------------------
