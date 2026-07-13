@@ -6,45 +6,23 @@ width="112"
   shape-rendering="crispEdges"
 >
 
+  width="80"
+  height="68"
+  viewBox="0 0 80 68"
+  shape-rendering="crispEdges"
+>
   <!-- Deep Blue Background -->
-  <rect width="112" height="68" fill="#141844" />
+  <rect width="80" height="68" fill="#141844" />
 
-  <!-- Gold Pattern Grid Structure -->
-  <g fill="#9C8350">
+  <!-- Gold Repeating Pattern Unit -->
+  <g fill="none" stroke="#9C8350" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
     <!-- Top & Bottom Frame Bars -->
-    <rect x="0" y="6" width="112" height="8" />
-    <rect x="0" y="54" width="112" height="8" />
+    <line x1="0" y1="10" x2="80" y2="10" />
+    <line x1="0" y1="58" x2="80" y2="58" />
 
-    <!-- LEFT BLOCK: Left-facing spiral loop (Width: 56px) -->
-    <!-- Entrance/Exit stem bridge -->
-    <rect x="0" y="30" width="16" height="8" />
-    <!-- Downward outer left wall -->
-    <rect x="8" y="30" width="8" height="24" />
-    <!-- Bottom horizontal floor -->
-    <rect x="8" y="46" width="40" height="8" />
-    <!-- Upward right outer wall -->
-    <rect x="40" y="22" width="8" height="32" />
-    <!-- Top horizontal ceiling -->
-    <rect x="24" y="22" width="24" height="8" />
-    <!-- Inner central downward hook -->
-    <rect x="24" y="22" width="8" height="16" />
-    <!-- Inner core center block -->
-    <rect x="24" y="38" width="16" height="8" />
-
-    <!-- RIGHT BLOCK: Right-facing spiral loop (Shifted exactly by 56px) -->
-    <!-- Center connecting bridge stem -->
-    <rect x="56" y="30" width="16" height="8" />
-    <!-- Upward outer left wall -->
-    <rect x="56" y="14" width="8" height="24" />
-    <!-- Top horizontal ceiling -->
-    <rect x="56" y="14" width="40" height="8" />
-    <!-- Downward right outer wall -->
-    <rect x="88" y="14" width="8" height="32" />
-    <!-- Bottom horizontal floor -->
-    <rect x="72" y="38" width="24" height="8" />
-    <!-- Inner central upward hook -->
-    <rect x="72" y="30" width="8" height="16" />
-    <!-- Inner core center block -->
-    <rect x="72" y="22" width="16" height="8" />
+    <!-- Pure Continuous Meander Path -->
+    <!-- Width per tile is exactly 80px. Line thickness and gaps are precisely 8px. -->
+    <path d="M 0,42 H 24 V 26 H 56 V 42 H 40 V 34" />
+    <path d="M 80,42 H 64" />
   </g>
 </svg>
