@@ -672,7 +672,7 @@ h3 {
   background-image: url("./assets/origin-line-art.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   opacity: 0.08;
   mix-blend-mode: multiply;
