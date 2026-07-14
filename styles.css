@@ -1473,36 +1473,46 @@ h3 {
    Mobile ornament alignment
 ================================================== */
 
-.ornament,
-.section-heading .ornament,
-.story-content .ornament,
-.contact-copy .ornament,
-.products .ornament,
-.tasting-section .ornament,
-.origin-section .ornament,
-.harvest-section .ornament,
-.recipes-section .ornament,
-.uses-section .ornament {
-  display: block;
-  width: 100%;
-  margin: 12px auto 24px;
-  text-align: center !important;
-}
+@media (max-width: 680px) {
+  .ornament,
+  .section-heading .ornament,
+  .story-content .ornament,
+  .contact-copy .ornament,
+  .products .ornament,
+  .tasting-section .ornament,
+  .origin-section .ornament,
+  .harvest-section .ornament,
+  .recipes-section .ornament,
+  .uses-section .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-.section-heading,
-.story-content,
-.contact-copy {
-  text-align: center;
-}
+    width: 100%;
+    margin: 12px auto 24px;
 
-.section-heading .ornament::before,
-.section-heading .ornament::after,
-.story-content .ornament::before,
-.story-content .ornament::after,
-.contact-copy .ornament::before,
-.contact-copy .ornament::after {
-  margin: 0 auto;
-}  
+    text-align: center !important;
+  }
+
+  .ornament::before,
+  .ornament::after {
+    display: block;
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 1px;
+
+    content: "";
+    background: var(--gold);
+  }
+
+  .section-heading,
+  .story-content,
+  .contact-copy {
+    text-align: center;
+  }
+}
   .hero h1 {
     font-size: clamp(40px, 13vw, 60px);
   }
