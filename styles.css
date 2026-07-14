@@ -590,15 +590,26 @@ h3 {
   line-height: 1.75;
 }
 
-.signature {
+.story-content p.signature {
+
   margin-top: 24px;
+
+  margin-bottom: 0;
+
   color: var(--blue);
+
   font-family: var(--script) !important;
-  font-size: clamp(64px, 10vw, 88px);
+
+  font-size: clamp(72px, 7vw, 105px);
+
   font-weight: 400;
-  line-height: 0.9;
+
+  line-height: 0.85;
+
   letter-spacing: 0;
+
   text-transform: none;
+
 }
 
 /* ==================================================
@@ -1460,6 +1471,11 @@ h3 {
   html { scroll-padding-top: 90px; }
   section { scroll-margin-top: 90px; }
 
+.story-content p.signature {
+  font-size: clamp(64px, 22vw, 92px);
+  line-height: 0.85;
+}
+  
   .topbar {
     gap: 9px;
     min-height: 34px;
