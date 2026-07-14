@@ -1570,13 +1570,17 @@ h3 {
     margin-left: auto;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
+.footer-bottom {
+  flex-direction: column;
+  align-items: center;
 
-    text-align: center;
-  }
-  /* ==================================================
+  text-align: center;
+}
+
+/* Close the mobile media query */
+}
+
+/* ==================================================
    Animation settings
 ================================================== */
 
