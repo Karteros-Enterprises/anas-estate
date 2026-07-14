@@ -647,6 +647,79 @@ h3 {
   letter-spacing: 0;
   text-transform: none;
 }
+
+/* ==================================================
+   Rooted in Place background
+================================================== */
+
+.origin-section {
+  position: relative;
+
+  padding:
+    var(--section-padding)
+    clamp(24px, 7vw, 100px);
+
+  overflow: hidden;
+
+  background: var(--cream);
+}
+
+.origin-bg {
+  position: absolute;
+  inset: -6%;
+  z-index: 0;
+
+  background-image: url("./assets/origin-line-art.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
+
+  animation:
+    origin-background-drift
+    40s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.origin-bg::after {
+  position: absolute;
+  inset: 0;
+
+  content: "";
+
+  background:
+    linear-gradient(
+      to bottom,
+      var(--cream) 0%,
+      rgba(247, 244, 238, 0.2) 18%,
+      rgba(247, 244, 238, 0) 42%,
+      rgba(247, 244, 238, 0) 60%,
+      rgba(247, 244, 238, 0.2) 82%,
+      var(--cream) 100%
+    );
+}
+
+.origin-content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes origin-background-drift {
+  from {
+    transform: scale(1.08) translateY(0);
+  }
+
+  to {
+    transform: scale(1.12) translateY(-16px);
+  }
+}
+
 /* ==================================================
    Origin and Kalamata
 ================================================== */
