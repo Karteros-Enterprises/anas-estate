@@ -1,10 +1,11 @@
 @font-face {
   font-family: "Luton Southard Script";
-  src: url("./assets/fonts/luton-southard-script.otf") format("opentype");
+  src: url("./assets/luton southard script.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
+
 :root {
   --blue: #001263;
   --blue-dark: #000b45;
@@ -16,7 +17,7 @@
   --white: #ffffff;
   --light-border: #eeeeee;
   --gold-border: #d9c5a3;
-  --script: "Luton Southard Script", cursive;
+--script: "Luton Southard Script", cursive;
   --serif: "Cormorant Garamond", serif;
   --sans: "Montserrat", sans-serif;
 
@@ -484,6 +485,8 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .origin {
@@ -563,10 +566,15 @@ h3 {
 
 .signature {
   margin-top: 24px;
-
   color: var(--blue);
 
-  font: 400 30px "Parisienne", cursive !important;
+  font-family: var(--script) !important;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 /* ==================================================
