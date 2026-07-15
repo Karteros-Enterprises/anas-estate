@@ -1,13 +1,13 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/PageHero.astro';
-import { SITE } from '../config/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { SITE } from '../../config/site';
 ---
 
 <BaseLayout
   title="Shipping and Delivery | Ana’s Estate"
   description="Shipping and delivery information for Ana’s Estate Kalamata PDO Extra Virgin Olive Oil."
-  canonical={`${SITE.url}/shipping`}
+  canonical={`${SITE.url}/policies/shipping`}
 >
   <main>
     <PageHero
@@ -147,11 +147,11 @@ import { SITE } from '../config/site';
               <h2>Shipping Questions</h2>
 
               <p>
-                For questions about an order, delivery or damaged package, contact Ana’s Estate and
+                For questions about an order, delivery or damaged package, contact us and
                 include your order number.
               </p>
 
-              <a class="btn" href={`mailto:${SITE.email}`}>Email Ana’s Estate</a>
+              <a class="btn" href="/contact">Contact Us</a>
             </div>
           </article>
         </div>
