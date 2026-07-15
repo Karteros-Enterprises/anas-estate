@@ -5,7 +5,7 @@ import { getProduct } from '../../data/products';
 
 const sku = Astro.url.searchParams.get('sku');
 const product = getProduct(sku);
-const checkoutHref = product ? `/checkout?sku=${product.sku}` : '/shop';
+const checkoutHref = product ? `/checkout?sku=${product.sku}` : '/products';
 ---
 
 <BaseLayout
