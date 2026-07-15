@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import { SITE } from '../config/site';
 ---
 
@@ -9,22 +10,12 @@ import { SITE } from '../config/site';
   canonical={`${SITE.url}/shipping`}
 >
   <main>
-    <section class="policy-hero" aria-labelledby="shipping-title">
-      <div class="policy-hero-art" aria-hidden="true"></div>
-
-      <div class="policy-hero-content reveal">
-        <p class="section-label">Customer Care</p>
-
-        <h1 id="shipping-title">Shipping and Delivery</h1>
-
-        <div class="ornament" aria-hidden="true">◇</div>
-
-        <p>
-          Information about order processing, delivery, tracking and receiving your Ana’s Estate
-          olive oil.
-        </p>
-      </div>
-    </section>
+    <PageHero
+      label="Customer Care"
+      title="Shipping and Delivery"
+      titleId="shipping-title"
+      description="Information about order processing, delivery, tracking and receiving your Ana’s Estate olive oil."
+    />
 
     <section class="policy-section">
       <div class="policy-layout">

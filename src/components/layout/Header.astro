@@ -11,6 +11,19 @@ const { isHome = false } = Astro.props;
 
 const section = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 const homeHref = isHome ? '#top' : '/';
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isShopPage = currentPath === '/shop';
+const isContactPage = currentPath === '/contact';
+
+function pageLinkProps(isActive: boolean) {
+  return {
+    class: isActive ? 'is-active' : undefined,
+    'aria-current': isActive ? ('page' as const) : undefined,
+  };
+}
+
+const shopLinkProps = pageLinkProps(isShopPage);
+const contactLinkProps = pageLinkProps(isContactPage);
 ---
 
 <header class="site-header">
@@ -27,8 +40,8 @@ const homeHref = isHome ? '#top' : '/';
 
     <nav class="nav nav-right" aria-label="Secondary navigation">
       <a href={section('tasting')}>Taste Profile</a>
-      <a href="/shop">Shop</a>
-      <a href={section('contact')}>Contact</a>
+      <a href="/shop" {...shopLinkProps}>Shop</a>
+      <a href="/contact" {...contactLinkProps}>Contact</a>
     </nav>
 
     <button
@@ -50,8 +63,8 @@ const homeHref = isHome ? '#top' : '/';
     <a href={section('harvest')}>Harvest</a>
     <a href={section('quality')}>Quality</a>
     <a href={section('tasting')}>Taste Profile</a>
-    <a href="/shop">Shop</a>
-    <a href={section('contact')}>Contact</a>
+    <a href="/shop" {...shopLinkProps}>Shop</a>
+    <a href="/contact" {...contactLinkProps}>Contact</a>
   </nav>
 </header>
 

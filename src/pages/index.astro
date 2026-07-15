@@ -8,8 +8,6 @@ import HarvestSection from '../components/sections/HarvestSection.astro';
 import QualitySection from '../components/sections/QualitySection.astro';
 import TastingSection from '../components/sections/TastingSection.astro';
 import UsesSection from '../components/sections/UsesSection.astro';
-import ProductsSection from '../components/sections/ProductsSection.astro';
-import ContactSection from '../components/sections/ContactSection.astro';
 import { SITE } from '../config/site';
 
 const jsonLd = await getHomeJsonLd();
@@ -33,8 +31,6 @@ const jsonLd = await getHomeJsonLd();
     <QualitySection />
     <TastingSection />
     <UsesSection />
-    <ProductsSection />
-    <ContactSection />
   </main>
 </BaseLayout>
 

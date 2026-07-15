@@ -1,7 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProductsSection from '../components/sections/ProductsSection.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import { formatPrice, PRODUCT_LIST } from '../data/products';
 import { SITE } from '../config/site';
+
+const products = PRODUCT_LIST;
 ---
 
 <BaseLayout
@@ -10,6 +15,45 @@ import { SITE } from '../config/site';
   canonical={`${SITE.url}/shop`}
 >
   <main>
-    <ProductsSection />
+    <PageHero
+      label="Shop Ana’s Estate"
+      title="Our Olive Oil"
+      titleId="shop-title"
+      description="Choose the format that best suits your table, kitchen or foodservice needs."
+    />
+
+    <section class="products products--subpage" id="products" aria-label="Our Olive Oil">
+      <SectionContainer>
+        <div class="product-grid reveal-group">
+          {
+            products.map((product) => (
+              <article class="product">
+                <Image
+                  src={product.image}
+                  alt={product.alt}
+                  loading="lazy"
+                  widths={[320, 480, 640]}
+                  sizes="(max-width: 680px) 100vw, 50vw"
+                />
+                <div>
+                  <p class="product-format">{product.format}</p>
+                  <h3>{product.title}</h3>
+                  <ul>
+                    <li>Koroneiki Monovarietal</li>
+                    <li>Early Harvest</li>
+                    <li>Cold Extracted</li>
+                    <li>PDO Kalamata</li>
+                  </ul>
+                  <div class="price">{formatPrice(product.priceCents)}</div>
+                  <a class="btn" href={`/checkout?sku=${product.sku}`}>
+                    Buy Now
+                  </a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </SectionContainer>
+    </section>
   </main>
 </BaseLayout>
