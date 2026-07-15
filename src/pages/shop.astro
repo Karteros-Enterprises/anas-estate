@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductsSection from '../components/sections/ProductsSection.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout
+  title="Shop | Ana’s Estate"
+  description="Shop Ana’s Estate premium Kalamata PDO Extra Virgin Olive Oil in bottle and case formats."
+  canonical={`${SITE.url}/shop`}
+>
+  <main>
+    <ProductsSection />
+  </main>
+</BaseLayout>
