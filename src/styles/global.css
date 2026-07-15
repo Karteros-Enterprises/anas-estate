@@ -1419,7 +1419,7 @@ h3 {
   display: block;
   width: fit-content;
   margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgb(255, 255, 255);
   font: 0.9em / 1.25 var(--serif);
   transition: color var(--animation-fast) ease, transform var(--animation-fast) ease;
 }
@@ -1431,7 +1431,7 @@ h3 {
 }
 
 .site-footer p {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgb(255, 255, 255);
   font: 0.9em / 1.25 var(--serif);
 }
 
@@ -1471,7 +1471,7 @@ h3 {
   gap: 22px;
   padding-block: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(255, 255, 255);
   font: 0.8em var(--serif);
 }
 
