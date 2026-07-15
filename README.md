@@ -1,14 +1,14 @@
 # Ana's Estate
 
-Premium Kalamata PDO Extra Virgin Olive Oil — marketing site built with [Astro](https://astro.build).
+Anas Estate primary marketing and eComm site built with [Astro](https://astro.build).
 
 ## Development
 
+Copy `.env.example` to `.env` and fill in the credentials.
+
 ```bash
-pnpm install
-cp .env.example .env
-# Fill in Stripe and Freightcom credentials in .env
-pnpm dev
+npm install
+npm dev
 ```
 
 Open [http://localhost:4321](http://localhost:4321) to preview the site locally.
@@ -16,13 +16,13 @@ Open [http://localhost:4321](http://localhost:4321) to preview the site locally.
 ## Build
 
 ```bash
-pnpm build
+npm build
 ```
 
 The Node adapter produces a standalone SSR server in `dist/`. Preview the production build with:
 
 ```bash
-pnpm preview
+npm preview
 ```
 
 ## Project structure
@@ -102,7 +102,7 @@ Request Freightcom API access at [freightcom.com/shipping-api](https://www.freig
 
 This site runs as a **Node SSR server**, not static files alone.
 
-1. Build: `pnpm build`
+1. Build: `npm build`
 2. Deploy `dist/` to a Node >= 22.12 host
 3. Start: `node ./dist/server/entry.mjs`
 4. Set all required environment variables on the host
