@@ -1395,6 +1395,7 @@ h3 {
 
 .brand-col img {
   width: 160px;
+  height: auto;
   margin: 0 auto 20px;
 }
 
