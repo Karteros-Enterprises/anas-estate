@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { images } from '../../assets/images';
+import SectionContainer from '../SectionContainer.astro';
 
 interface Props {
   isHome?: boolean;
@@ -13,33 +14,35 @@ const homeHref = isHome ? '#top' : '/';
 ---
 
 <header class="site-header">
-  <nav class="nav nav-left" aria-label="Primary navigation">
-    <a href={section('story')}>Our Story</a>
-    <a href={section('origin')}>Our Olive Oil</a>
-    <a href={section('harvest')}>Harvest</a>
-  </nav>
+  <SectionContainer class="site-header__inner">
+    <nav class="nav nav-left" aria-label="Primary navigation">
+      <a href={section('story')}>Our Story</a>
+      <a href={section('origin')}>Our Olive Oil</a>
+      <a href={section('harvest')}>Harvest</a>
+    </nav>
 
-  <a class="logo" href={homeHref} aria-label="Ana’s Estate home">
-    <Image src={images.logo} alt="Ana’s Estate" loading="eager" />
-  </a>
+    <a class="logo" href={homeHref} aria-label="Ana’s Estate home">
+      <Image src={images.logo} alt="Ana’s Estate" loading="eager" />
+    </a>
 
-  <nav class="nav nav-right" aria-label="Secondary navigation">
-    <a href={section('tasting')}>Taste Profile</a>
-    <a href={section('products')}>Shop</a>
-    <a href={section('contact')}>Contact</a>
-  </nav>
+    <nav class="nav nav-right" aria-label="Secondary navigation">
+      <a href={section('tasting')}>Taste Profile</a>
+      <a href={section('products')}>Shop</a>
+      <a href={section('contact')}>Contact</a>
+    </nav>
 
-  <button
-    class="menu-toggle"
-    type="button"
-    aria-label="Open navigation"
-    aria-expanded="false"
-    aria-controls="mobile-menu"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </SectionContainer>
 
   <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
     <a href={section('story')}>Our Story</a>

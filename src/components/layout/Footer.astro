@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { images } from '../../assets/images';
 import { FORMSUBMIT_ACTION, SITE } from '../../config/site';
+import SectionContainer from '../SectionContainer.astro';
 
 interface Props {
   isHome?: boolean;
@@ -15,7 +16,7 @@ const section = (id: string) => (isHome ? `#${id}` : `/#${id}`);
 <footer class="site-footer">
   <div class="greek-line" aria-hidden="true"></div>
 
-  <div class="footer-main">
+  <SectionContainer class="footer-main">
     <div class="brand-col">
       <Image src={images.logoWhite} alt="Ana’s Estate" loading="lazy" />
       <p>
@@ -69,11 +70,11 @@ const section = (id: string) => (isHome ? `#${id}` : `/#${id}`);
         <button type="submit" aria-label="Subscribe">›</button>
       </form>
     </div>
-  </div>
+  </SectionContainer>
 
-  <div class="footer-bottom">
+  <SectionContainer class="footer-bottom">
     <span>© 2026 {SITE.name}. All rights reserved.</span>
     <span>Product of Greece / Produit de Grèce</span>
     <span>Imported by {SITE.importer}</span>
-  </div>
+  </SectionContainer>
 </footer>

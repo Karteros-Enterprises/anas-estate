@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { images } from '../../assets/images';
+import SectionContainer from '../SectionContainer.astro';
 
 const steps = [
   {
@@ -39,38 +40,40 @@ const steps = [
 ---
 
 <section class="harvest-section" id="harvest" aria-labelledby="harvest-title">
-  <div class="section-heading reveal">
-    <p class="section-label">From Grove to Bottle</p>
+  <SectionContainer>
+    <div class="section-heading reveal">
+      <p class="section-label">From Grove to Bottle</p>
 
-    <h2 id="harvest-title">Our Harvest Process</h2>
+      <h2 id="harvest-title">Our Harvest Process</h2>
 
-    <div class="ornament" aria-hidden="true">◇</div>
+      <div class="ornament" aria-hidden="true">◇</div>
 
-    <p>
-      Each stage is carefully managed to protect the fruit and preserve the flavour, aroma and
-      natural quality of the finished oil.
-    </p>
-  </div>
+      <p>
+        Each stage is carefully managed to protect the fruit and preserve the flavour, aroma and
+        natural quality of the finished oil.
+      </p>
+    </div>
 
-  <div class="harvest-steps reveal-group">
-    {
-      steps.map((step) => (
-        <article>
-          <Image
-            class="harvest-image"
-            src={step.image}
-            alt={step.alt}
-            loading="lazy"
-            widths={[320, 480, 640]}
-            sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 25vw"
-          />
-          <div class="harvest-content">
-            <span class="step-number">{step.number}</span>
-            <h3>{step.title}</h3>
-            <p>{step.description}</p>
-          </div>
-        </article>
-      ))
-    }
-  </div>
+    <div class="harvest-steps reveal-group">
+      {
+        steps.map((step) => (
+          <article>
+            <Image
+              class="harvest-image"
+              src={step.image}
+              alt={step.alt}
+              loading="lazy"
+              widths={[320, 480, 640]}
+              sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 25vw"
+            />
+            <div class="harvest-content">
+              <span class="step-number">{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </SectionContainer>
 </section>

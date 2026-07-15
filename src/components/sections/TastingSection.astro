@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { images } from '../../assets/images';
+import SectionContainer from '../SectionContainer.astro';
 
 const notes = [
   {
@@ -22,30 +23,32 @@ const notes = [
 ---
 
 <section class="tasting-section" id="tasting" aria-labelledby="tasting-title">
-  <div class="section-heading reveal">
-    <p class="section-label">Sensory Profile</p>
+  <SectionContainer>
+    <div class="section-heading reveal">
+      <p class="section-label">Sensory Profile</p>
 
-    <h2 id="tasting-title">Tasting Notes</h2>
+      <h2 id="tasting-title">Tasting Notes</h2>
 
-    <div class="ornament">◇</div>
-  </div>
+      <div class="ornament">◇</div>
+    </div>
 
-  <div class="note-grid reveal-group">
-    {
-      notes.map((note) => (
-        <article>
-          <Image
-            src={note.image}
-            alt=""
-            class="tasting-icon"
-            loading="lazy"
-            widths={[62, 124]}
-            sizes="62px"
-          />
-          <h3>{note.title}</h3>
-          <p>{note.description}</p>
-        </article>
-      ))
-    }
-  </div>
+    <div class="note-grid reveal-group">
+      {
+        notes.map((note) => (
+          <article>
+            <Image
+              src={note.image}
+              alt=""
+              class="tasting-icon"
+              loading="lazy"
+              widths={[62, 124]}
+              sizes="62px"
+            />
+            <h3>{note.title}</h3>
+            <p>{note.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </SectionContainer>
 </section>

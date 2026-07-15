@@ -1,5 +1,10 @@
+---
+import SectionContainer from '../SectionContainer.astro';
+---
+
 <section class="story-section" id="story" aria-labelledby="story-title">
-  <!-- <div class="story-art-wrap reveal reveal-scale">
+  <SectionContainer narrow>
+    <!-- <div class="story-art-wrap reveal reveal-scale">
     <Image
       class="story-art parallax-layer"
       src={images.familyGroveLineArt}
@@ -9,31 +14,32 @@
     />
   </div> -->
 
-  <div class="story-content reveal">
-    <p class="section-label">Our Heritage</p>
+    <div class="story-content reveal">
+      <p class="section-label">Our Heritage</p>
 
-    <h2 id="story-title">Our Family Story</h2>
+      <h2 id="story-title">Our Family Story</h2>
 
-    <div class="ornament" aria-hidden="true">◇</div>
+      <div class="ornament" aria-hidden="true">◇</div>
 
-    <div class="story-copy">
-      <p>
-        For generations, our family has cared for ancient Koroneiki olive trees growing among the
-        hills of Kalamata, Greece.
-      </p>
+      <div class="story-copy">
+        <p>
+          For generations, our family has cared for ancient Koroneiki olive trees growing among the
+          hills of Kalamata, Greece.
+        </p>
 
-      <p>
-        Each harvest is guided by patience, tradition and a deep respect for the land. The olives
-        are carefully gathered and cold extracted within hours to preserve their freshness, vibrant
-        aroma and natural quality.
-      </p>
+        <p>
+          Each harvest is guided by patience, tradition and a deep respect for the land. The olives
+          are carefully gathered and cold extracted within hours to preserve their freshness, vibrant
+          aroma and natural quality.
+        </p>
 
-      <p>
-        Ana’s Estate is more than olive oil. It is our family’s story, bottled in Greece and shared
-        from our grove to your table.
-      </p>
+        <p>
+          Ana’s Estate is more than olive oil. It is our family’s story, bottled in Greece and shared
+          from our grove to your table.
+        </p>
+      </div>
+
+      <p class="signature">Ana</p>
     </div>
-
-    <p class="signature">Ana</p>
-  </div>
+  </SectionContainer>
 </section>

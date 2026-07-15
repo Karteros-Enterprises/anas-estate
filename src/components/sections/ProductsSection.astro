@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { images } from '../../assets/images';
 import { STRIPE_LINKS } from '../../config/site';
+import SectionContainer from '../SectionContainer.astro';
 
 const products = [
   {
@@ -24,51 +25,47 @@ const products = [
 ---
 
 <section class="products" id="products" aria-labelledby="products-title">
-  <div class="section-heading reveal">
-    <p class="section-label">Shop Ana’s Estate</p>
+  <SectionContainer>
+    <div class="section-heading reveal">
+      <p class="section-label">Shop Ana’s Estate</p>
 
-    <h2 id="products-title">Our Olive Oil</h2>
+      <h2 id="products-title">Our Olive Oil</h2>
 
-    <div class="ornament" aria-hidden="true">◇</div>
+      <div class="ornament" aria-hidden="true">◇</div>
 
-    <p>Choose the format that best suits your table, kitchen or foodservice needs.</p>
-  </div>
+      <p>Choose the format that best suits your table, kitchen or foodservice needs.</p>
+    </div>
 
-  <div class="product-grid reveal-group">
-    {
-      products.map((product) => (
-        <article class="product">
-          <Image
-            src={product.image}
-            alt={product.alt}
-            loading="lazy"
-            widths={[320, 480, 640]}
-            sizes="(max-width: 680px) 100vw, 50vw"
-          />
-          <div>
-            <p class="product-format">{product.format}</p>
-            <h3>{product.title}</h3>
-            <ul>
-              <li>Koroneiki Monovarietal</li>
-              <li>Early Harvest</li>
-              <li>Cold Extracted</li>
-              <li>PDO Kalamata</li>
-            </ul>
-            <div class="price">{product.price}</div>
-            <a
-              class="btn"
-              href={product.stripeLink}
-              target="_blank"
-              rel="noopener"
-            >
-              Buy Now
-            </a>
-          </div>
-        </article>
-      ))
-    }
+    <div class="product-grid reveal-group">
+      {
+        products.map((product) => (
+          <article class="product">
+            <Image
+              src={product.image}
+              alt={product.alt}
+              loading="lazy"
+              widths={[320, 480, 640]}
+              sizes="(max-width: 680px) 100vw, 50vw"
+            />
+            <div>
+              <p class="product-format">{product.format}</p>
+              <h3>{product.title}</h3>
+              <ul>
+                <li>Koroneiki Monovarietal</li>
+                <li>Early Harvest</li>
+                <li>Cold Extracted</li>
+                <li>PDO Kalamata</li>
+              </ul>
+              <div class="price">{product.price}</div>
+              <a class="btn" href={product.stripeLink} target="_blank" rel="noopener">
+                Buy Now
+              </a>
+            </div>
+          </article>
+        ))
+      }
 
-    <!-- Disabled foodservice product kept for future use
+      <!-- Disabled foodservice product kept for future use
     <article class="product">
       <Image src={images.tin16l} alt="Chef's Bulk Supply - 5L Tin" loading="lazy" />
       <div>
@@ -85,5 +82,6 @@ const products = [
       </div>
     </article>
     -->
-  </div>
+    </div>
+  </SectionContainer>
 </section>

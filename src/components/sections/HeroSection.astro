@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { images } from '../../assets/images';
+import SectionContainer from '../SectionContainer.astro';
 ---
 
 <section class="hero" aria-labelledby="hero-title">
@@ -17,41 +18,43 @@ import { images } from '../../assets/images';
 
   <div class="hero-fade" aria-hidden="true"></div>
 
-  <div class="hero-copy parallax-layer" data-parallax-speed="0.03">
-    <p class="overline gold">2025 Early Harvest</p>
+  <SectionContainer class="hero__inner">
+    <div class="hero-copy parallax-layer" data-parallax-speed="0.03">
+      <p class="overline gold">2025 Early Harvest</p>
 
-    <h1 id="hero-title">
-      PDO Kalamata
-      <br />
-      <span>Extra Virgin Olive Oil</span>
-    </h1>
+      <h1 id="hero-title">
+        PDO Kalamata
+        <br />
+        <span>Extra Virgin Olive Oil</span>
+      </h1>
 
-    <p class="fr">Huile d’olive vierge extra</p>
+      <p class="fr">Huile d’olive vierge extra</p>
 
-    <p class="caps">
-      Single Estate
-      <i aria-hidden="true">◆</i>
-      Cold Extracted
-    </p>
+      <p class="caps">
+        Single Estate
+        <i aria-hidden="true">◆</i>
+        Cold Extracted
+      </p>
 
-    <p class="script">Koroneiki Monovarietal</p>
+      <p class="script">Koroneiki Monovarietal</p>
 
-    <p class="origin">Product of Greece / Produit de Grèce</p>
+      <p class="origin">Product of Greece / Produit de Grèce</p>
 
-    <a class="btn" href="#products">Shop Our Olive Oil</a>
-  </div>
+      <a class="btn" href="#products">Shop Our Olive Oil</a>
+    </div>
 
-  <div class="hero-bottle-wrap parallax-layer" data-parallax-speed="-0.025">
-    <Image
-      class="hero-bottle"
-      src={images.heroBottle}
-      alt="Ana’s Estate 750 millilitre Extra Virgin Olive Oil bottle"
-      loading="eager"
-      fetchpriority="high"
-      widths={[400, 600, 800]}
-      sizes="(max-width: 680px) 72vw, 560px"
-    />
-  </div>
+    <div class="hero-bottle-wrap parallax-layer" data-parallax-speed="-0.025">
+      <Image
+        class="hero-bottle"
+        src={images.heroBottle}
+        alt="Ana’s Estate 750 millilitre Extra Virgin Olive Oil bottle"
+        loading="eager"
+        fetchpriority="high"
+        widths={[400, 600, 800]}
+        sizes="(max-width: 680px) 72vw, 560px"
+      />
+    </div>
+  </SectionContainer>
 </section>
 
 <script>
