@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../config/site';
+import { getProduct } from '../../data/products';
+
+const sku = Astro.url.searchParams.get('sku');
+const product = getProduct(sku);
+const checkoutHref = product ? `/checkout?sku=${product.sku}` : '/#products';
+---
+
+<BaseLayout
+  title="Checkout Cancelled | Ana’s Estate"
+  description="Your Ana’s Estate checkout was cancelled."
+  canonical={`${SITE.url}/checkout/cancel`}
+>
+  <main class="checkout-page">
+    <section class="checkout-empty policy-section">
+      <div class="checkout-empty__inner reveal">
+        <p class="section-label">Checkout</p>
+        <h1>Payment not completed</h1>
+        <div class="ornament" aria-hidden="true">◇</div>
+        <p>Your order was not placed. You can return to checkout whenever you are ready.</p>
+        <a class="btn" href={checkoutHref}>Return to checkout</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

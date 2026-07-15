@@ -1,12 +1,21 @@
 import { getImage } from 'astro:assets';
 import { images } from '../assets/images';
 import { SITE } from '../config/site';
+import { PRODUCT_LIST } from './products';
 
 export async function getHomeJsonLd() {
   const logo = await getImage({ src: images.logo, format: 'png' });
-  const heroBottle = await getImage({ src: images.heroBottle, format: 'png' });
-  const caseOf12 = await getImage({ src: images.caseOf12, format: 'png' });
   const socialPreviewUrl = `${SITE.url}/images/social-preview.jpg`;
+
+  const productImages = await Promise.all(
+    PRODUCT_LIST.map(async (product) => ({
+      product,
+      imageUrl: new URL(
+        (await getImage({ src: product.image, format: 'png' })).src,
+        SITE.url,
+      ).href,
+    })),
+  );
 
   return {
     '@context': 'https://schema.org',
@@ -67,52 +76,28 @@ export async function getHomeJsonLd() {
         },
         inLanguage: 'en-CA',
       },
-      {
+      ...productImages.map(({ product, imageUrl }) => ({
         '@type': 'Product',
-        '@id': `${SITE.url}/#750ml-bottle`,
-        name: 'Ana’s Estate Kalamata PDO Extra Virgin Olive Oil — 750 ml',
-        description:
-          'Premium single-estate Kalamata PDO Extra Virgin Olive Oil, cold extracted from early-harvest Koroneiki olives grown in Kalamata, Greece.',
-        image: [new URL(heroBottle.src, SITE.url).href],
+        '@id': `${SITE.url}/#${product.schemaId}`,
+        name: product.schemaName,
+        description: product.schemaDescription,
+        image: [imageUrl],
         brand: { '@type': 'Brand', name: SITE.name },
         manufacturer: { '@id': `${SITE.url}/#organization` },
         category: 'Extra Virgin Olive Oil',
         countryOfOrigin: { '@type': 'Country', name: 'Greece' },
-        size: '750 ml',
+        size: product.schemaSize,
         itemCondition: 'https://schema.org/NewCondition',
         offers: {
           '@type': 'Offer',
-          url: `${SITE.url}/#products`,
-          price: '65.00',
+          url: `${SITE.url}/checkout?sku=${product.sku}`,
+          price: (product.priceCents / 100).toFixed(2),
           priceCurrency: 'CAD',
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
           seller: { '@id': `${SITE.url}/#organization` },
         },
-      },
-      {
-        '@type': 'Product',
-        '@id': `${SITE.url}/#case-of-12`,
-        name: 'Ana’s Estate Kalamata PDO Extra Virgin Olive Oil — Case of 12',
-        description:
-          'A family estate case containing twelve 750 ml bottles of Ana’s Estate Kalamata PDO Extra Virgin Olive Oil.',
-        image: [new URL(caseOf12.src, SITE.url).href],
-        brand: { '@type': 'Brand', name: SITE.name },
-        manufacturer: { '@id': `${SITE.url}/#organization` },
-        category: 'Extra Virgin Olive Oil',
-        countryOfOrigin: { '@type': 'Country', name: 'Greece' },
-        size: '12 × 750 ml',
-        itemCondition: 'https://schema.org/NewCondition',
-        offers: {
-          '@type': 'Offer',
-          url: `${SITE.url}/#products`,
-          price: '720.00',
-          priceCurrency: 'CAD',
-          availability: 'https://schema.org/InStock',
-          itemCondition: 'https://schema.org/NewCondition',
-          seller: { '@id': `${SITE.url}/#organization` },
-        },
-      },
+      })),
     ],
   };
 }

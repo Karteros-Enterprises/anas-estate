@@ -1,27 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-import { images } from '../../assets/images';
-import { STRIPE_LINKS } from '../../config/site';
+import { PRODUCT_LIST } from '../../data/products';
+import { formatPrice } from '../../data/products';
 import SectionContainer from '../SectionContainer.astro';
 
-const products = [
-  {
-    image: images.heroBottle,
-    alt: 'Ana’s Estate 750 millilitre Extra Virgin Olive Oil bottle',
-    format: 'Estate 750ml Bottle',
-    title: 'Estate Bottle',
-    price: '$65.00',
-    stripeLink: STRIPE_LINKS.bottle,
-  },
-  {
-    image: images.caseOf12,
-    alt: 'Family Estate Pack of 12 Bottles',
-    format: 'Family Estate Pack of 12 Bottles',
-    title: 'Family and Kitchen Format',
-    price: '$720.00',
-    stripeLink: STRIPE_LINKS.fiveL,
-  },
-] as const;
+const products = PRODUCT_LIST;
 ---
 
 <section class="products" id="products" aria-labelledby="products-title">
@@ -56,32 +39,14 @@ const products = [
                 <li>Cold Extracted</li>
                 <li>PDO Kalamata</li>
               </ul>
-              <div class="price">{product.price}</div>
-              <a class="btn" href={product.stripeLink} target="_blank" rel="noopener">
+              <div class="price">{formatPrice(product.priceCents)}</div>
+              <a class="btn" href={`/checkout?sku=${product.sku}`}>
                 Buy Now
               </a>
             </div>
           </article>
         ))
       }
-
-      <!-- Disabled foodservice product kept for future use
-    <article class="product">
-      <Image src={images.tin16l} alt="Chef's Bulk Supply - 5L Tin" loading="lazy" />
-      <div>
-        <p class="product-format">Chef's Bulk Supply - 5L Tin</p>
-        <h3>Foodservice Format</h3>
-        <ul>
-          <li>Koroneiki Monovarietal</li>
-          <li>Early Harvest</li>
-          <li>Cold Extracted</li>
-          <li>PDO Kalamata</li>
-        </ul>
-        <div class="price">$200.00</div>
-        <a class="btn" href={STRIPE_LINKS.sixteenL} target="_blank" rel="noopener">Buy Now</a>
-      </div>
-    </article>
-    -->
     </div>
   </SectionContainer>
 </section>

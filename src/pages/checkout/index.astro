@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../config/site';
+import { formatPrice, getProduct } from '../../data/products';
+
+export const prerender = false;
+
+const sku = Astro.url.searchParams.get('sku');
+const product = getProduct(sku);
+const checkoutProduct = product
+  ? {
+      sku: product.sku,
+      name: product.name,
+      format: product.format,
+      priceCents: product.priceCents,
+      priceLabel: formatPrice(product.priceCents),
+    }
+  : null;
+---
+
+<BaseLayout
+  title={checkoutProduct ? `Checkout — ${checkoutProduct.name} | Ana’s Estate` : 'Checkout | Ana’s Estate'}
+  description="Complete your Ana’s Estate olive oil order with live Canadian shipping rates."
+  canonical={`${SITE.url}/checkout`}
+>
+  <main class="checkout-page">
+    {
+      !checkoutProduct ? (
+        <section class="checkout-empty policy-section">
+          <div class="checkout-empty__inner reveal">
+            <p class="section-label">Checkout</p>
+            <h1>Product not found</h1>
+            <p>Choose a product from our shop to begin checkout.</p>
+            <a class="btn" href="/#products">Back to shop</a>
+          </div>
+        </section>
+      ) : (
+        <section class="checkout-section policy-section">
+          <div class="checkout-layout">
+            <div class="checkout-intro reveal">
+              <p class="section-label">Secure Checkout</p>
+              <h1>Complete Your Order</h1>
+              <div class="ornament" aria-hidden="true">
+                ◇
+              </div>
+              <p>
+                Enter your Canadian shipping address to see live carrier rates, then continue to secure
+                payment.
+              </p>
+            </div>
+
+            <div
+              class="checkout-grid reveal"
+              data-checkout
+              data-sku={checkoutProduct.sku}
+              data-price-cents={checkoutProduct.priceCents}
+            >
+              <div class="checkout-panel">
+                <h2>Shipping Address</h2>
+                <form id="checkout-address-form" class="checkout-form" novalidate>
+                  <label for="checkout-name">Full name</label>
+                  <input id="checkout-name" name="name" autocomplete="name" required />
+
+                  <label for="checkout-email">Email</label>
+                  <input
+                    id="checkout-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+
+                  <label for="checkout-phone">Phone</label>
+                  <input
+                    id="checkout-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                  />
+
+                  <label for="checkout-address-line-1">Street address</label>
+                  <input
+                    id="checkout-address-line-1"
+                    name="addressLine1"
+                    autocomplete="address-line1"
+                    required
+                  />
+
+                  <label for="checkout-address-line-2">Apartment, suite, etc. (optional)</label>
+                  <input
+                    id="checkout-address-line-2"
+                    name="addressLine2"
+                    autocomplete="address-line2"
+                  />
+
+                  <label for="checkout-unit">Unit (optional)</label>
+                  <input id="checkout-unit" name="unitNumber" />
+
+                  <div class="checkout-form__row">
+                    <div>
+                      <label for="checkout-city">City</label>
+                      <input id="checkout-city" name="city" autocomplete="address-level2" required />
+                    </div>
+                    <div>
+                      <label for="checkout-region">Province</label>
+                      <select id="checkout-region" name="region" autocomplete="address-level1" required>
+                        <option value="">Select</option>
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="YT">Yukon</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <label for="checkout-postal-code">Postal code</label>
+                  <input
+                    id="checkout-postal-code"
+                    name="postalCode"
+                    autocomplete="postal-code"
+                    required
+                  />
+
+                  <button class="btn" type="submit">Get shipping rates</button>
+                </form>
+
+                <div id="checkout-shipping" class="checkout-shipping" hidden>
+                  <h2>Shipping Method</h2>
+                  <p id="shipping-status" class="checkout-status" hidden></p>
+                  <div id="shipping-options" class="shipping-options"></div>
+                </div>
+
+                <p id="checkout-error" class="checkout-error" role="alert" hidden></p>
+              </div>
+
+              <aside class="checkout-summary">
+                <h2>Order Summary</h2>
+                <div class="checkout-summary__product">
+                  <p class="checkout-summary__format">{checkoutProduct.format}</p>
+                  <h3>{checkoutProduct.name}</h3>
+                </div>
+                <dl class="checkout-summary__lines">
+                  <div>
+                    <dt>Product</dt>
+                    <dd>{checkoutProduct.priceLabel}</dd>
+                  </div>
+                  <div>
+                    <dt>Shipping</dt>
+                    <dd id="summary-shipping">Select a shipping method</dd>
+                  </div>
+                  <div class="checkout-summary__total">
+                    <dt>Total</dt>
+                    <dd id="summary-total">{formatPrice(checkoutProduct.priceCents)}</dd>
+                  </div>
+                </dl>
+                <button id="checkout-pay" class="btn" type="button" disabled>
+                  Continue to payment
+                </button>
+                <p class="checkout-summary__note">
+                  You will complete payment securely on Stripe. Shipping is quoted in Canadian
+                  dollars for destinations within Canada.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </section>
+      )
+    }
+  </main>
+
+  {checkoutProduct && <script src="../../scripts/checkout.ts"></script>}
+</BaseLayout>
