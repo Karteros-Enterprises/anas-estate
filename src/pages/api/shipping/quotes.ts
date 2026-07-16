@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getProduct } from '../../../data/products';
+import { getProduct } from '../../../lib/catalog';
 import { errorResponse, jsonResponse, parseJsonBody, quoteRequestSchema, ValidationError } from '../../../lib/api';
 import { fetchShippingRates } from '../../../lib/freightcom';
 import { buildRateRequest, mapFreightcomRates } from '../../../lib/shipping';
@@ -9,7 +9,7 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request }) => {
   try {
     const { sku, destination } = await parseJsonBody(request, quoteRequestSchema);
-    const product = getProduct(sku);
+    const product = await getProduct(sku);
     if (!product) {
       return errorResponse('Product not found', 404);
     }

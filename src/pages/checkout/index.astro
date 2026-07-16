@@ -2,12 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import { SITE } from '../../config/site';
-import { formatPrice, getProduct } from '../../data/products';
+import { formatPrice, getProduct } from '../../lib/catalog';
 
 export const prerender = false;
 
 const sku = Astro.url.searchParams.get('sku');
-const product = getProduct(sku);
+const product = await getProduct(sku);
 const checkoutProduct = product
   ? {
       sku: product.sku,

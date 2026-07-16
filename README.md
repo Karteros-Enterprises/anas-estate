@@ -35,9 +35,9 @@ src/
     layout/         Topbar, Header, Footer
     sections/       Homepage sections
   config/site.ts    Site constants and forms
-  data/             Product catalog and JSON-LD schema
+  data/             JSON-LD schema
   layouts/          Page shell (BaseLayout)
-  lib/              Stripe, Freightcom, shipping, and API helpers
+  lib/              Stripe catalog, Freightcom, shipping, and API helpers
   pages/
     api/            Shipping quotes and checkout session endpoints
     checkout/       On-site checkout flow
@@ -75,14 +75,33 @@ Checkout uses an on-site flow at `/checkout?sku=bottle` or `/checkout?sku=case-o
 
 ### Stripe Dashboard setup
 
-Before going live, create Stripe Products and Prices in CAD:
+Before going live, create Stripe Products and Prices in CAD. Map each sellable price to an env variable:
 
 | Product | Price | Env variable |
 | --- | --- | --- |
 | Estate 750ml Bottle | $65.00 CAD | `STRIPE_PRICE_BOTTLE` |
 | Family Estate Pack of 12 | $720.00 CAD | `STRIPE_PRICE_CASE_OF_12` |
 
-Use a [restricted API key](https://docs.stripe.com/keys/restricted-api-keys) with Checkout Sessions write access for `STRIPE_SECRET_KEY`.
+Use a [restricted API key](https://docs.stripe.com/keys/restricted-api-keys) with Checkout Sessions write access plus Products and Prices read access for `STRIPE_SECRET_KEY`.
+
+The shop, checkout, and homepage schema load product name, description, image, and price from Stripe at request time. Stripe is the source of truth for catalog content and pricing.
+
+Each Stripe Product also needs metadata for checkout and shipping:
+
+| Metadata key | Required | Example | Purpose |
+| --- | --- | --- | --- |
+| `sku` | Yes | `bottle` | URL identifier (`/checkout?sku=bottle`) |
+| `format` | No | `Estate 750ml Bottle` | Shop subtitle and Freightcom package description |
+| `image_alt` | No | `Ana's Estate 750ml bottle` | Image alt text (defaults to product name) |
+| `schema_id` | No | `750ml-bottle` | JSON-LD `@id` suffix (defaults to `sku`) |
+| `schema_size` | No | `750 ml` | JSON-LD product size |
+| `sort_order` | No | `1` | Shop page ordering |
+| `package_weight_lb` | Yes | `3.5` | Freightcom parcel weight |
+| `package_length_in` | Yes | `12` | Freightcom parcel length |
+| `package_width_in` | Yes | `4` | Freightcom parcel width |
+| `package_height_in` | Yes | `4` | Freightcom parcel height |
+
+Upload product images in the Stripe Dashboard; those URLs are used on the shop page and in structured data.
 
 Retire the old Payment Links once the new checkout flow is live.
 

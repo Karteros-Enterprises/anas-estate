@@ -1,21 +1,12 @@
 import { getImage } from 'astro:assets';
 import { images } from '../assets/images';
 import { SITE } from '../config/site';
-import { PRODUCT_LIST } from './products';
+import { getProducts } from '../lib/catalog';
 
 export async function getHomeJsonLd() {
+  const products = await getProducts();
   const logo = await getImage({ src: images.logo, format: 'png' });
   const socialPreviewUrl = `${SITE.url}/images/social-preview.jpg`;
-
-  const productImages = await Promise.all(
-    PRODUCT_LIST.map(async (product) => ({
-      product,
-      imageUrl: new URL(
-        (await getImage({ src: product.image, format: 'png' })).src,
-        SITE.url,
-      ).href,
-    })),
-  );
 
   return {
     '@context': 'https://schema.org',
@@ -76,12 +67,12 @@ export async function getHomeJsonLd() {
         },
         inLanguage: 'en-CA',
       },
-      ...productImages.map(({ product, imageUrl }) => ({
+      ...products.map((product) => ({
         '@type': 'Product',
         '@id': `${SITE.url}/#${product.schemaId}`,
-        name: product.schemaName,
-        description: product.schemaDescription,
-        image: [imageUrl],
+        name: product.name,
+        description: product.description,
+        image: product.imageUrl ? [product.imageUrl] : undefined,
         brand: { '@type': 'Brand', name: SITE.name },
         manufacturer: { '@id': `${SITE.url}/#organization` },
         category: 'Extra Virgin Olive Oil',

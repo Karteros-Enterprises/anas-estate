@@ -1,12 +1,11 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-import { formatPrice, PRODUCT_LIST } from '../data/products';
+import { formatPrice, getProducts } from '../lib/catalog';
 import { SITE } from '../config/site';
 
-const products = PRODUCT_LIST;
+const products = await getProducts();
 ---
 
 <BaseLayout
@@ -28,16 +27,20 @@ const products = PRODUCT_LIST;
           {
             products.map((product) => (
               <article class="product">
-                <Image
-                  src={product.image}
-                  alt={product.alt}
-                  loading="lazy"
-                  widths={[320, 480, 640]}
-                  sizes="(max-width: 680px) 100vw, 50vw"
-                />
+                {
+                  product.imageUrl ? (
+                    <img
+                      src={product.imageUrl}
+                      alt={product.imageAlt}
+                      loading="lazy"
+                      width="640"
+                      height="640"
+                    />
+                  ) : null
+                }
                 <div>
                   <p class="product-format">{product.format}</p>
-                  <h3>{product.title}</h3>
+                  <h3>{product.name}</h3>
                   <ul>
                     <li>Koroneiki Monovarietal</li>
                     <li>Early Harvest</li>

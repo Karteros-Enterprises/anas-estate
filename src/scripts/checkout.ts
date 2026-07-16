@@ -1,5 +1,3 @@
-export type ProductSku = 'bottle' | 'case-of-12';
-
 export type ShippingQuoteOption = {
   serviceId: string;
   carrierName: string;
@@ -59,7 +57,7 @@ export function readDestination(form: HTMLFormElement): DestinationInput {
 }
 
 export function initCheckout(root: HTMLElement): void {
-  const productSku = root.dataset.sku as ProductSku | undefined;
+  const productSku = root.dataset.sku;
   const addressForm = root.querySelector<HTMLFormElement>('#checkout-address-form');
   const shippingSection = root.querySelector<HTMLElement>('#checkout-shipping');
   const shippingOptions = root.querySelector<HTMLElement>('#shipping-options');

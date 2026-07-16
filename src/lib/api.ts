@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import type { ZodError } from 'zod';
-import { isProductSku } from '../data/products';
 import {
   isValidCanadianPostalCode,
   isValidCanadianProvince,
@@ -51,7 +50,7 @@ export const destinationSchema = z.object({
 });
 
 export const quoteRequestSchema = z.object({
-  sku: z.string().refine(isProductSku, 'Invalid product'),
+  sku: z.string().trim().min(1, 'Invalid product'),
   destination: destinationSchema,
 });
 

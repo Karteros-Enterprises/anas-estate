@@ -1,12 +1,12 @@
 import Stripe from 'stripe';
-import type { Product } from '../data/products';
+import type { Product } from './catalog';
 import type { ShippingDestination, ShippingOption } from './shipping';
 import { formatAddress } from './shipping';
-import { getEnv, getStripePriceId } from './env';
+import { getEnv } from './env';
 
 let stripeClient: Stripe | undefined;
 
-function getStripe(): Stripe {
+export function getStripe(): Stripe {
   if (!stripeClient) {
     stripeClient = new Stripe(getEnv().STRIPE_SECRET_KEY);
   }
@@ -35,7 +35,7 @@ export async function createCheckoutSession({
     customer_email: destination.email,
     line_items: [
       {
-        price: getStripePriceId(product.sku),
+        price: product.stripePriceId,
         quantity: 1,
       },
       {

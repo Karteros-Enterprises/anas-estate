@@ -1,4 +1,4 @@
-import type { Product } from '../data/products';
+import type { Product } from './catalog';
 import type { FreightcomRate, RateRequestBody, ShippingLocation } from './freightcom';
 import { getEnv } from './env';
 

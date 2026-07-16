@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE } from '../../config/site';
-import { getProduct } from '../../data/products';
+import { getProduct } from '../../lib/catalog';
 
 const sku = Astro.url.searchParams.get('sku');
-const product = getProduct(sku);
+const product = await getProduct(sku);
 const checkoutHref = product ? `/checkout?sku=${product.sku}` : '/products';
 ---
 

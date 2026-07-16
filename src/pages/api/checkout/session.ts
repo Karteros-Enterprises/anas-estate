@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getProduct } from '../../../data/products';
+import { getProduct } from '../../../lib/catalog';
 import {
   checkoutSessionSchema,
   errorResponse,
@@ -19,7 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
       request,
       checkoutSessionSchema,
     );
-    const product = getProduct(sku);
+    const product = await getProduct(sku);
     if (!product) {
       return errorResponse('Product not found', 404);
     }

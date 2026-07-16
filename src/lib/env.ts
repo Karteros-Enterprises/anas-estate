@@ -38,7 +38,7 @@ export function getEnv(): Env {
   return cachedEnv;
 }
 
-export function getStripePriceId(sku: 'bottle' | 'case-of-12'): string {
+export function getStripePriceIds(): string[] {
   const env = getEnv();
-  return sku === 'bottle' ? env.STRIPE_PRICE_BOTTLE : env.STRIPE_PRICE_CASE_OF_12;
+  return [env.STRIPE_PRICE_BOTTLE, env.STRIPE_PRICE_CASE_OF_12];
 }
