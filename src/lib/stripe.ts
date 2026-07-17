@@ -33,19 +33,34 @@ export async function createCheckoutSession({
     mode: 'payment',
     currency: 'cad',
     customer_email: destination.email,
+    payment_intent_data: {
+      shipping: {
+        name: destination.name,
+        phone: destination.phone,
+        address: {
+          line1: destination.addressLine1,
+          line2: destination.addressLine2,
+          city: destination.city,
+          state: destination.region.toUpperCase(),
+          postal_code: destination.postalCode,
+          country: destination.country,
+        },
+      },
+    },
+    shipping_options: [
+      {
+        shipping_rate_data: {
+          display_name: `${shipping.carrierName} ${shipping.serviceName}`,
+          fixed_amount: {
+            amount: shipping.totalCents,
+            currency: 'cad',
+          }
+        },
+      }
+    ],
     line_items: [
       {
         price: product.stripePriceId,
-        quantity: 1,
-      },
-      {
-        price_data: {
-          currency: 'cad',
-          product_data: {
-            name: `Shipping | ${shipping.carrierName} ${shipping.serviceName}`,
-          },
-          unit_amount: shipping.totalCents,
-        },
         quantity: 1,
       },
     ],
