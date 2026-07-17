@@ -16,6 +16,7 @@ export type Product = {
     lengthIn: number;
     widthIn: number;
     heightIn: number;
+    quantity: number;
   };
   sortOrder: number;
 };
@@ -135,6 +136,7 @@ function parsePackageMetadata(
     lengthIn: parsePositiveNumber(metadata.package_length_in, 'package_length_in', productId),
     widthIn: parsePositiveNumber(metadata.package_width_in, 'package_width_in', productId),
     heightIn: parsePositiveNumber(metadata.package_height_in, 'package_height_in', productId),
+    quantity: parsePositiveNumber(metadata.package_quantity, 'package_quantity', productId),
   };
 }
 

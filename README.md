@@ -92,15 +92,16 @@ Each Stripe Product also needs metadata for checkout and shipping:
 | Metadata key | Required | Example | Purpose |
 | --- | --- | --- | --- |
 | `sku` | Yes | `bottle` | URL identifier (`/checkout?sku=bottle`) |
-| `format` | No | `Estate 750ml Bottle` | Shop subtitle and Freightcom package description |
+| `format` | No | `Estate 750ml Bottle` | Shop subtitle and shipping package description |
 | `image_alt` | No | `Ana's Estate 750ml bottle` | Image alt text (defaults to product name) |
 | `schema_id` | No | `750ml-bottle` | JSON-LD `@id` suffix (defaults to `sku`) |
 | `schema_size` | No | `750 ml` | JSON-LD product size |
 | `sort_order` | No | `1` | Shop page ordering |
-| `package_weight_lb` | Yes | `3.5` | Freightcom parcel weight |
-| `package_length_in` | Yes | `12` | Freightcom parcel length |
-| `package_width_in` | Yes | `4` | Freightcom parcel width |
-| `package_height_in` | Yes | `4` | Freightcom parcel height |
+| `package_weight_lb` | Yes | `3.5` | Shipping parcel weight |
+| `package_length_in` | Yes | `12` | Shipping parcel length |
+| `package_width_in` | Yes | `4` | Shipping parcel width |
+| `package_height_in` | Yes | `4` | Shipping parcel height |
+| `package_quantity` | Yes | `1` | Number of packages |
 
 Upload product images in the Stripe Dashboard; those URLs are used on the shop page and in structured data.
 

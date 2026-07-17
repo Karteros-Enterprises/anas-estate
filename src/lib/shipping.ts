@@ -111,8 +111,10 @@ export function buildRateRequest(
       destination: buildLocation(destination, true),
       packaging_type: 'package',
       packaging_properties: {
-        packages: [
-          {
+        packages: Array.from(
+          { length: product.package.quantity },
+          () => {
+            return {
             measurements: {
               weight: { unit: 'lb', value: product.package.weightLb },
               cuboid: {
@@ -123,8 +125,9 @@ export function buildRateRequest(
               },
             },
             description: product.format ?? product.name,
+};
           },
-        ],
+        ),
       },
       signature_requirement: 'not-required',
     },
