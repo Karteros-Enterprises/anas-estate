@@ -31,15 +31,15 @@ const section = (id: string) => (isHome ? `#${id}` : `/#${id}`);
       <a href={section('origin')}>Our Olive Oil</a>
       <a href={section('harvest')}>Harvest</a>
       <a href={section('quality')}>Quality</a>
-      <a href={section('products')}>Shop</a>
+      <a href="/products">Shop</a>
       {isHome && <a href={section('tasting')}>Taste Profile</a>}
     </div>
 
     <div>
       <h4>Customer Care</h4>
-      <a href={section('contact')}>Contact</a>
-      <a href="/shipping">Shipping and Delivery</a>
-      <a href={section('contact')}>Wholesale Inquiries</a>
+      <a href="/contact">Contact</a>
+      <a href="/policies/shipping">Shipping and Delivery</a>
+      <a href="/contact">Wholesale Inquiries</a>
       <a href="/files/label.pdf" target="_blank" rel="noopener">Product Label</a>
     </div>
 
@@ -54,7 +54,7 @@ const section = (id: string) => (isHome ? `#${id}` : `/#${id}`);
       </p>
 
       <form class="newsletter" action={FORMSUBMIT_ACTION} method="POST">
-        <input type="hidden" name="_subject" value="New Ana’s Estate newsletter signup" />
+        <input type="hidden" name="_subject" value="Ana’s Estate newsletter signup form submission" />
         <input type="hidden" name="_captcha" value="false" />
 
         <label for="newsletter-email" hidden>Email address</label>
@@ -75,6 +75,6 @@ const section = (id: string) => (isHome ? `#${id}` : `/#${id}`);
   <SectionContainer class="footer-bottom">
     <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
     <span>Product of Greece / Produit de Grèce</span>
-    <span>Imported by {SITE.importer}</span>
+    <span>Imported by {SITE.companyName}</span>
   </SectionContainer>
 </footer>

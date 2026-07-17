@@ -1,30 +1,21 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE } from '../config/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { SITE } from '../../config/site';
 ---
 
 <BaseLayout
   title="Shipping and Delivery | Ana’s Estate"
   description="Shipping and delivery information for Ana’s Estate Kalamata PDO Extra Virgin Olive Oil."
-  canonical={`${SITE.url}/shipping`}
+  canonical={`${SITE.url}/policies/shipping`}
 >
   <main>
-    <section class="policy-hero" aria-labelledby="shipping-title">
-      <div class="policy-hero-art" aria-hidden="true"></div>
-
-      <div class="policy-hero-content reveal">
-        <p class="section-label">Customer Care</p>
-
-        <h1 id="shipping-title">Shipping and Delivery</h1>
-
-        <div class="ornament" aria-hidden="true">◇</div>
-
-        <p>
-          Information about order processing, delivery, tracking and receiving your Ana’s Estate
-          olive oil.
-        </p>
-      </div>
-    </section>
+    <PageHero
+      label="Customer Care"
+      title="Shipping and Delivery"
+      titleId="shipping-title"
+      description="Information about order processing, delivery, tracking and receiving your Ana’s Estate olive oil."
+    />
 
     <section class="policy-section">
       <div class="policy-layout">
@@ -84,8 +75,8 @@ import { SITE } from '../config/site';
               <h2>Shipping Costs</h2>
 
               <p>
-                Available shipping methods and applicable charges are displayed during checkout
-                before payment is completed.
+                Available shipping methods and applicable charges are calculated in real time during
+                checkout on our website before payment is completed.
               </p>
 
               <p>
@@ -156,11 +147,11 @@ import { SITE } from '../config/site';
               <h2>Shipping Questions</h2>
 
               <p>
-                For questions about an order, delivery or damaged package, contact Ana’s Estate and
+                For questions about an order, delivery or damaged package, contact us and
                 include your order number.
               </p>
 
-              <a class="btn" href={`mailto:${SITE.email}`}>Email Ana’s Estate</a>
+              <a class="btn" href="/contact">Contact Us</a>
             </div>
           </article>
         </div>
