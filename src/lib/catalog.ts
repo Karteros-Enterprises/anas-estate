@@ -100,7 +100,7 @@ function mapStripePriceToProduct(price: Stripe.Price): Product | null {
   }
 
   const metadata = stripeProduct.metadata;
-  const sku = metadata.sku?.trim() ?? stripeProduct.id.replace('prod_', '');
+  const sku = metadata.sku?.trim();
   if (!sku) {
     console.warn(`Stripe product ${stripeProduct.id} is missing metadata.sku, skipping`);
     return null;
