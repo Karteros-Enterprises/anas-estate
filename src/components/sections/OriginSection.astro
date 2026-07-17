@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import { images } from '../../assets/images';
 import SectionContainer from '../SectionContainer.astro';
 ---
 
@@ -21,7 +23,9 @@ import SectionContainer from '../SectionContainer.astro';
 
     <div class="origin-grid reveal-group">
       <article>
-        <div class="icon" aria-hidden="true">◇</div>
+        <div class="icon" aria-hidden="true">
+          <Image src={images.pdoSeal} alt="PDO Kalamata" width={42} height={42} />
+        </div>
         <h3>PDO Kalamata</h3>
         <p>
           Protected Designation of Origin certification connects our olive oil directly to Kalamata

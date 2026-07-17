@@ -728,6 +728,10 @@ h3 {
 
 .origin-grid article {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 38px 34px;
   text-align: center;
   border-right: 1px solid var(--gold-border);

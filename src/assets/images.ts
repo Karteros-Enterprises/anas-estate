@@ -15,9 +15,8 @@ import iconSeafood from './images/icons/kitchen/icon_seafood.png';
 import iconBread from './images/icons/kitchen/icon_bread.png';
 import iconMeats from './images/icons/kitchen/icon_meats.png';
 import iconSoups from './images/icons/kitchen/icon_soups.png';
-import caseOf12 from './images/products/anas-estate-case-of-12.png';
-import tin16l from './images/products/tin-16l.png';
 import familyGroveLineArt from './images/story/family-grove-line-art.png';
+import pdoSeal from './images/icons/pdo.svg';
 
 export const images = {
   logo,
@@ -37,7 +36,6 @@ export const images = {
   iconBread,
   iconMeats,
   iconSoups,
-  caseOf12,
-  tin16l,
   familyGroveLineArt,
+  pdoSeal,
 } as const;
