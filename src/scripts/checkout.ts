@@ -89,23 +89,6 @@ export function initCheckout(root: HTMLElement): void {
   let selectedOption: ShippingQuoteOption | null = null;
   let isLoading = false;
 
-  const regionSelect = addressForm.querySelector<HTMLSelectElement>('#checkout-region');
-  if (regionSelect) {
-    const defaultRegion = regionSelect.dataset.defaultRegion ?? 'ON';
-    regionSelect.value = defaultRegion;
-
-    regionSelect.addEventListener('change', () => {
-      regionSelect.dataset.userSelected = 'true';
-    });
-
-    // Browsers may autofill after initial render; restore the default unless the user chose a province.
-    window.setTimeout(() => {
-      if (regionSelect.dataset.userSelected !== 'true') {
-        regionSelect.value = defaultRegion;
-      }
-    }, 0);
-  }
-
   const setFormError = (message: string) => {
     errorBox.textContent = message;
     errorBox.hidden = !message;

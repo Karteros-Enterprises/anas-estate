@@ -55,10 +55,17 @@ const checkoutProduct = product
               >
               <div class="checkout-panel">
                 <h2>Shipping Details</h2>
-                <form id="checkout-address-form" class="checkout-form" novalidate>
+                <form id="checkout-address-form" class="checkout-form" autocomplete="on" novalidate>
                   <div class="checkout-field" data-field="name">
                     <label for="checkout-name">Full name</label>
-                    <input id="checkout-name" name="name" autocomplete="name" required />
+                    <input
+                      id="checkout-name"
+                      name="name"
+                      type="text"
+                      autocomplete="shipping name"
+                      autocapitalize="words"
+                      required
+                    />
                     <p class="checkout-field__error" role="alert" hidden></p>
                   </div>
 
@@ -69,7 +76,7 @@ const checkoutProduct = product
                         id="checkout-email"
                         name="email"
                         type="email"
-                        autocomplete="email"
+                        autocomplete="shipping email"
                         required
                       />
                       <p class="checkout-field__error" role="alert" hidden></p>
@@ -80,7 +87,8 @@ const checkoutProduct = product
                         id="checkout-phone"
                         name="phone"
                         type="tel"
-                        autocomplete="tel"
+                        autocomplete="shipping tel"
+                        inputmode="tel"
                         required
                       />
                       <p class="checkout-field__error" role="alert" hidden></p>
@@ -92,7 +100,8 @@ const checkoutProduct = product
                     <input
                       id="checkout-address-line-1"
                       name="addressLine1"
-                      autocomplete="address-line1"
+                      type="text"
+                      autocomplete="shipping address-line1"
                       required
                     />
                     <p class="checkout-field__error" role="alert" hidden></p>
@@ -103,7 +112,8 @@ const checkoutProduct = product
                     <input
                       id="checkout-address-line-2"
                       name="addressLine2"
-                      autocomplete="address-line2"
+                      type="text"
+                      autocomplete="shipping address-line2"
                     />
                     <p class="checkout-field__error" role="alert" hidden></p>
                   </div>
@@ -111,7 +121,14 @@ const checkoutProduct = product
                   <div class="checkout-form__row">
                     <div class="checkout-field" data-field="city">
                       <label for="checkout-city">City</label>
-                      <input id="checkout-city" name="city" autocomplete="address-level2" required />
+                      <input
+                        id="checkout-city"
+                        name="city"
+                        type="text"
+                        autocomplete="shipping address-level2"
+                        autocapitalize="words"
+                        required
+                      />
                       <p class="checkout-field__error" role="alert" hidden></p>
                     </div>
                     <div class="checkout-field" data-field="region">
@@ -119,9 +136,8 @@ const checkoutProduct = product
                       <select
                         id="checkout-region"
                         name="region"
-                        autocomplete="address-level1"
+                        autocomplete="shipping address-level1"
                         required
-                        data-default-region="ON"
                       >
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
@@ -147,7 +163,9 @@ const checkoutProduct = product
                       <input
                         id="checkout-postal-code"
                         name="postalCode"
-                        autocomplete="postal-code"
+                        type="text"
+                        autocomplete="shipping postal-code"
+                        autocapitalize="characters"
                         required
                       />
                       <p class="checkout-field__error" role="alert" hidden></p>
@@ -157,9 +175,8 @@ const checkoutProduct = product
                       <select
                         id="checkout-country"
                         name="country"
-                        autocomplete="country"
+                        autocomplete="shipping country-code"
                         required
-                        disabled
                       >
                         <option value="CA" selected={true}>Canada</option>
                       </select>
