@@ -24,11 +24,22 @@ export type StallionPackage = {
   package_contents?: string | null;
 };
 
+export type StallionCustomsItem = {
+  title: string;
+  description?: string | null;
+  quantity: number;
+  value: number;
+  currency?: string;
+  country_of_origin?: string | null;
+  sku?: string | null;
+};
+
 export type StallionRateRequest = {
   type?: 'regular' | 'courier';
   to_address: StallionAddress;
   from_address?: StallionAddress | null;
   packages: StallionPackage[];
+  items: StallionCustomsItem[];
   signature_confirmation?: boolean | null;
   region?: 'ON' | 'BC' | 'QC' | 'AB' | null;
 };
@@ -67,6 +78,7 @@ async function parseError(response: Response): Promise<string> {
   try {
     const body = await response.json();
     if (typeof body?.message === 'string') return body.message;
+    if (typeof body?.error?.message === 'string') return body.error.message;
     if (typeof body?.error === 'string') return body.error;
     return JSON.stringify(body);
   } catch {

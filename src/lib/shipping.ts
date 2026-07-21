@@ -114,6 +114,17 @@ export function buildRateRequest(
       size_unit: 'in' as const,
       package_contents: product.format ?? product.name,
     })),
+    items: [
+      {
+        title: product.name,
+        description: product.format ?? product.description ?? null,
+        quantity: 1,
+        value: product.priceCents / 100,
+        currency: 'CAD',
+        country_of_origin: 'GR',
+        sku: product.sku,
+      },
+    ],
     signature_confirmation: false,
     region: STALLION_REGIONS.has(shipFromRegion)
       ? (shipFromRegion as 'ON' | 'BC' | 'QC' | 'AB')
