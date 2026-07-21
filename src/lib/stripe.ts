@@ -53,7 +53,8 @@ export async function createCheckoutSession({
     },
     shipping_options: shippingOptions.slice(0, 3).map((shipping) => ({
       shipping_rate_data: {
-        display_name: `${shipping.carrierName} ${shipping.serviceName}`,
+        type: 'fixed_amount' as const,
+        display_name: shipping.serviceName,
         fixed_amount: {
           amount: shipping.totalCents,
           currency: 'cad',

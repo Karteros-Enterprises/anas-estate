@@ -252,7 +252,7 @@ export function initCheckout(root: HTMLElement): void {
 
       const copy = document.createElement('div');
       const title = document.createElement('strong');
-      title.textContent = `${option.carrierName} | ${option.serviceName}`;
+      title.textContent = option.serviceName;
 
       const meta = document.createElement('span');
       const transit =
