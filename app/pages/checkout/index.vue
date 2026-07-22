@@ -172,6 +172,7 @@
                   <p v-if="shippingStatus" class="checkout-status">{{ shippingStatus }}</p>
                   <div
                     v-if="shippingOptions.length > 0"
+                    ref="shippingOptionsEl"
                     class="summary-shipping-options"
                     role="radiogroup"
                     aria-label="Shipping method"
@@ -290,6 +291,7 @@ const loading = ref(false);
 const loadingAction = ref<'quote' | 'pay' | null>(null);
 const quoteId = ref<string | null>(null);
 const shippingOptions = ref<QuoteOption[]>([]);
+const shippingOptionsEl = ref<HTMLElement | null>(null);
 const selectedServiceId = ref<string | null>(null);
 const shippingStatus = ref('');
 
@@ -357,6 +359,12 @@ function resetShipping() {
 
 watch(destination, resetShipping, { deep: true });
 
+function scrollToShippingOptions() {
+  if (!import.meta.client) return;
+  if (!window.matchMedia('(max-width: 900px)').matches) return;
+  shippingOptionsEl.value?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 async function requestQuotes() {
   formError.value = '';
 
@@ -393,6 +401,11 @@ async function requestQuotes() {
     shippingStatus.value = data.options.length
       ? 'Select a shipping method to continue.'
       : 'No shipping options available.';
+
+    if (data.options.length > 0) {
+      await nextTick();
+      scrollToShippingOptions();
+    }
   } catch (error: unknown) {
     resetShipping();
     const body = getFetchErrorBody(error);
