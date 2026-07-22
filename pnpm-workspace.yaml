@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+minimumReleaseAgeExclude:
+  - '@nuxtjs/seo@5.3.6'
+  - nuxtseo-shared@5.3.6
