@@ -751,8 +751,9 @@ h3 {
   margin: 0 auto;
   object-fit: contain;
   filter: drop-shadow(0 26px 18px rgba(0, 0, 0, 0.2));
-  animation: bottle-float 7s ease-in-out infinite;
-  will-change: translate;
+  transform-origin: 50% 85%;
+  animation: bottle-float 6.5s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* ==================================================
@@ -1800,13 +1801,19 @@ h3 {
 }
 
 @keyframes bottle-float {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -9px; }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  20% { transform: translateY(-4px) rotate(-1.1deg); }
+  40% { transform: translateY(-8px) rotate(0.7deg); }
+  60% { transform: translateY(-5px) rotate(-0.8deg); }
+  80% { transform: translateY(-2px) rotate(0.5deg); }
 }
 
 @keyframes bottle-float-mobile {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -8px; }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  20% { transform: translateY(-3px) rotate(-0.9deg); }
+  40% { transform: translateY(-7px) rotate(0.6deg); }
+  60% { transform: translateY(-4px) rotate(-0.7deg); }
+  80% { transform: translateY(-2px) rotate(0.4deg); }
 }
 
 @keyframes portrait-ring-breathe {
@@ -2112,7 +2119,7 @@ h3 {
     max-height: 330px;
     margin: 0 auto;
     object-fit: contain;
-    transform: none;
+    transform-origin: 50% 85%;
     animation: bottle-float-mobile 6s ease-in-out infinite;
   }
   .story-section {
