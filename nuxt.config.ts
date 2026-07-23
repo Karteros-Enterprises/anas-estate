@@ -89,12 +89,16 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { static: true },
     '/products': { swr: 300 },
+    '/products/**': { swr: 300 },
     '/contact': { static: true },
     '/policies/**': { static: true },
     '/cart': { robots: 'noindex, nofollow' },
     '/checkout/**': { robots: 'noindex, nofollow' },
     '/checkout/success': { static: true },
     '/checkout/cancel': { static: true },
+  },
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
   },
   typescript: {
     strict: true,
