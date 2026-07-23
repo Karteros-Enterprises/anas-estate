@@ -87,12 +87,14 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
-    '/': { isr: true },
+    '/': { static: true },
     '/products': { swr: 300 },
-    '/contact': { isr: true },
-    '/policies/**': { isr: true },
+    '/contact': { static: true },
+    '/policies/**': { static: true },
     '/cart': { robots: 'noindex, nofollow' },
     '/checkout/**': { robots: 'noindex, nofollow' },
+    '/checkout/success': { static: true },
+    '/checkout/cancel': { static: true },
   },
   typescript: {
     strict: true,
