@@ -165,17 +165,26 @@ h3 {
 ================================================== */
 
 .greek-line {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 28px;
   background-color: var(--blue);
+  border-top: 2.5px solid var(--gold);
+  border-bottom: 2.5px solid var(--gold);
+}
+
+.greek-line::before {
+  position: absolute;
+  inset: 0;
+  width: calc(100% + 277px);
+  content: "";
   background-image: url("/textures/greek-key.svg");
   background-repeat: repeat-x;
   background-position: left center;
   background-size: auto 15px;
-  border-top: 2.5px solid var(--gold);
-  border-bottom: 2.5px solid var(--gold);
   animation: greek-key-drift 35s linear infinite;
-  will-change: background-position;
+  will-change: transform;
 }
 
 /* ==================================================
@@ -393,18 +402,27 @@ h3 {
 .ornament::after {
   display: block;
   flex: 0 0 auto;
-  width: 0;
+  width: 52px;
   height: 1px;
   content: "";
   background: var(--gold);
-  transition: width 0.9s var(--animation-easing);
+  transform: scaleX(0);
+  transition: transform 0.9s var(--animation-easing);
+}
+
+.ornament::before {
+  transform-origin: right center;
+}
+
+.ornament::after {
+  transform-origin: left center;
 }
 
 .is-visible .ornament::before,
 .is-visible .ornament::after,
 .ornament.is-visible::before,
 .ornament.is-visible::after {
-  width: 52px;
+  transform: scaleX(1);
 }
 
 .icon {
@@ -458,8 +476,8 @@ h3 {
     rgba(255, 255, 255, 0.32),
     transparent
   );
-  transform: rotate(22deg);
-  transition: left 0.75s ease;
+  transform: translateX(0) rotate(22deg);
+  transition: transform 0.75s ease;
 }
 
 .btn:hover,
@@ -473,7 +491,8 @@ h3 {
 
 .btn:hover::before,
 .btn:focus-visible::before {
-  left: 145%;
+  /* 235% of button width ≈ 522% of this 45%-wide pseudo */
+  transform: translateX(522%) rotate(22deg);
 }
 
 .btn:disabled {
@@ -1834,8 +1853,8 @@ h3 {
 }
 
 @keyframes greek-key-drift {
-  from { background-position: 0 center; }
-  to { background-position: -277px center; }
+  from { transform: translateX(0); }
+  to { transform: translateX(-277px); }
 }
 
 /* ==================================================
@@ -1929,15 +1948,15 @@ h3 {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    transition: color var(--animation-fast) ease, padding-left var(--animation-fast) ease,
+    transition: color var(--animation-fast) ease, transform var(--animation-fast) ease,
       background var(--animation-fast) ease;
   }
 
   .mobile-nav a:hover,
   .mobile-nav a:focus-visible {
-    padding-left: 10px;
     color: var(--gold);
     background: rgba(185, 138, 61, 0.06);
+    transform: translateX(10px);
   }
 
   .mobile-nav a:last-child { border-bottom: 0; }
@@ -2047,9 +2066,12 @@ h3 {
 
   .greek-line {
     height: 16px;
-    background-size: auto 9px;
     border-top-width: 1.5px;
     border-bottom-width: 1.5px;
+  }
+
+  .greek-line::before {
+    background-size: auto 9px;
   }
 
   .site-header {
@@ -2414,7 +2436,7 @@ h3 {
 
   .ornament::before,
   .ornament::after {
-    width: 52px;
+    transform: scaleX(1);
   }
 
   .parallax-layer {
@@ -2542,7 +2564,7 @@ h3 {
 
   transition:
     color var(--animation-fast) ease,
-    padding-left var(--animation-fast) ease;
+    transform var(--animation-fast) ease;
 }
 
 .policy-sidebar a:last-child {
@@ -2551,9 +2573,8 @@ h3 {
 
 .policy-sidebar a:hover,
 .policy-sidebar a:focus-visible {
-  padding-left: 6px;
-
   color: var(--gold);
+  transform: translateX(6px);
 }
 
 .policy-content {
