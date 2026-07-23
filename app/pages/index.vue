@@ -238,6 +238,8 @@
 </template>
 
 <script setup lang="ts">
+import { productPath } from '#shared/utils/product';
+
 useSeoMeta({
   title: 'Premium Kalamata PDO Extra Virgin Olive Oil',
   description:
@@ -273,7 +275,7 @@ useSchemaOrg([
         name: 'Greece',
       },
       offers: defineOffer({
-        url: '/products',
+        url: productPath(product.sku),
         price: (product.priceCents / 100).toFixed(2),
         priceCurrency: 'CAD',
         availability: 'https://schema.org/InStock',

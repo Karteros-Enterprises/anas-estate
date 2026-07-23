@@ -177,7 +177,7 @@ const { itemCount, hydrated } = useCart();
 
 const isHome = computed(() => route.path === '/');
 const currentPath = computed(() => route.path.replace(/\/$/, '') || '/');
-const isShopPage = computed(() => currentPath.value === '/products');
+const isShopPage = computed(() => currentPath.value === '/products' || currentPath.value.startsWith('/products/'));
 const isContactPage = computed(() => currentPath.value === '/contact');
 const isCartPage = computed(() => currentPath.value === '/cart');
 const homeHref = computed(() => (isHome.value ? '#top' : '/'));

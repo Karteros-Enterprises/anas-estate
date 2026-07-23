@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import type { CatalogProduct } from '#shared/types';
+import { productPath } from '#shared/utils/product';
 
 useSeoMeta({
   title: 'Shop',
@@ -49,7 +50,7 @@ useSchemaOrg([
         name: "Ana's Estate",
       },
       offers: defineOffer({
-        url: '/products',
+        url: productPath(product.sku),
         price: (product.priceCents / 100).toFixed(2),
         priceCurrency: 'CAD',
         availability: 'https://schema.org/InStock',

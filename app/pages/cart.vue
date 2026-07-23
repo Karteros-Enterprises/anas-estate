@@ -36,7 +36,9 @@
               </div>
               <div class="cart-line__details">
                 <p v-if="line.format" class="cart-line__format">{{ line.format }}</p>
-                <h2 class="cart-line__name">{{ line.name }}</h2>
+                <h2 class="cart-line__name">
+                  <NuxtLink :to="productPath(line.sku)">{{ line.name }}</NuxtLink>
+                </h2>
                 <p class="cart-line__unit-price">{{ formatCurrency(line.priceCents) }}</p>
               </div>
               <div class="cart-line__controls">
@@ -96,6 +98,7 @@
 
 <script setup lang="ts">
 import { formatCurrency } from '#shared/utils/format';
+import { productPath } from '#shared/utils/product';
 import type { CatalogProduct } from '#shared/types';
 
 useSeoMeta({

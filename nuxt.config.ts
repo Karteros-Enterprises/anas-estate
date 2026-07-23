@@ -89,6 +89,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { static: true },
     '/products': { swr: 300 },
+    '/products/**': { swr: 300 },
     '/contact': { static: true },
     '/policies/**': { static: true },
     '/cart': { robots: 'noindex, nofollow' },

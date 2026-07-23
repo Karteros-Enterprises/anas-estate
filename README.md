@@ -29,7 +29,7 @@ pnpm preview
 
 Shopping uses a browser-persisted cart (`localStorage` via `useCart`) and an on-site checkout flow:
 
-1. Customer adds products from `/products`
+1. Customer browses `/products` and opens a product page (`/products/{sku}`) or adds to cart from the listing
 2. Cart page reviews items, then continues to `/checkout`
 3. Customer enters a Canadian shipping address
 4. The server requests live parcel rates from Stallion (with configurable markup)

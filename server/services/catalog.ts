@@ -1,5 +1,5 @@
 import type Stripe from 'stripe';
-import type { Product } from '#shared/types';
+import type { CatalogProduct, Product } from '#shared/types';
 import { useStripe } from '#server/services/stripe';
 
 let cachedProducts: Product[] | undefined;
@@ -26,6 +26,18 @@ export async function getCatalogProduct(
   if (!sku) return undefined;
   const products = await listCatalogProducts();
   return products.find((product) => product.sku === sku);
+}
+
+export function toPublicCatalogProduct(product: Product): CatalogProduct {
+  return {
+    sku: product.sku,
+    name: product.name,
+    description: product.description,
+    features: product.features,
+    format: product.format,
+    imageUrl: product.imageUrl,
+    priceCents: product.priceCents,
+  };
 }
 
 async function listCatalogPrices(stripe: Stripe): Promise<Stripe.Price[]> {
