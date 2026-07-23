@@ -4,7 +4,7 @@
       label="Customer Care"
       title="Shipping and Delivery"
       title-id="shipping-title"
-      description="Information about order processing, delivery, tracking and receiving your Ana’s Estate olive oil."
+      description="Information about order processing, delivery, tracking and receiving your Ana\'s Estate olive oil."
     />
 
     <section class="policy-section">
@@ -33,8 +33,7 @@
                 provided during checkout.
               </p>
               <p class="policy-note">
-                Add your usual order-processing timeframe here, such as “Orders are generally
-                processed within 1–3 business days.”
+                Orders are generally processed within 1-2 business days.
               </p>
             </div>
           </article>
@@ -131,6 +130,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Shipping and Delivery',
-  description: 'Shipping and delivery information for Ana’s Estate Kalamata PDO Extra Virgin Olive Oil.',
+  description: 'Shipping and delivery information for Ana\'s Estate Kalamata PDO Extra Virgin Olive Oil.',
 });
 </script>

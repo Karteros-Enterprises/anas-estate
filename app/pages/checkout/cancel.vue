@@ -15,6 +15,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Checkout Cancelled',
-  description: 'Your Ana’s Estate checkout was cancelled.',
+  description: 'Your Ana\'s Estate checkout was cancelled.',
 });
 </script>

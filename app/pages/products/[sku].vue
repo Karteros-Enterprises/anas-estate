@@ -15,7 +15,7 @@
             </div>
 
             <div class="product-detail__info reveal reveal-right">
-              <p class="section-label">{{ product.format || 'Shop Ana’s Estate' }}</p>
+              <p class="section-label">{{ product.format || 'Shop Ana\'s Estate' }}</p>
               <h1 id="product-title">{{ product.name }}</h1>
               <div class="ornament" aria-hidden="true">◇</div>
               <p v-if="product.description" class="product-detail__description">
@@ -100,7 +100,7 @@ useSeoMeta({
   title: () => product.value?.name ?? 'Product',
   description: () =>
     product.value?.description
-    ?? 'Shop Ana’s Estate premium Kalamata PDO Extra Virgin Olive Oil.',
+    ?? 'Shop Ana\'s Estate premium Kalamata PDO Extra Virgin Olive Oil.',
   ogImage: () => product.value?.imageUrl,
 });
 

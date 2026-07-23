@@ -21,7 +21,7 @@
             <br />
             <span>Extra Virgin Olive Oil</span>
           </h1>
-          <p class="fr">Huile d’olive vierge extra</p>
+          <p class="fr">Huile d'olive vierge extra</p>
           <p class="caps">
             Single Estate
             <i aria-hidden="true">◆</i>
@@ -36,7 +36,7 @@
           <NuxtImg
             class="hero-bottle"
             src="/images/hero/hero-bottle.png"
-            alt="Ana’s Estate 750 millilitre Extra Virgin Olive Oil bottle"
+            alt="Ana's Estate 750 millilitre Extra Virgin Olive Oil bottle"
             loading="eager"
             sizes="(max-width: 680px) 72vw, 560px"
             format="webp"
@@ -62,7 +62,7 @@
               freshness, vibrant aroma and natural quality.
             </p>
             <p>
-              Ana’s Estate is more than olive oil. It is our family’s story, bottled in Greece and
+              Ana's Estate is more than olive oil. It is our family's story, bottled in Greece and
               shared from our grove to your table.
             </p>
           </div>
@@ -153,7 +153,7 @@
     <section class="quality-section" id="quality" aria-labelledby="quality-title">
       <SectionContainer class-name="quality-section__inner">
         <div class="quality-intro reveal reveal-left">
-          <p class="section-label gold">Ana’s Estate Quality</p>
+          <p class="section-label gold">Ana's Estate Quality</p>
           <h2 id="quality-title">Authenticity in Every Drop</h2>
           <p>
             Our olive oil is defined by its origin, olive variety, harvest timing and carefully
@@ -248,7 +248,7 @@ import { defineCatalogProducts } from '~/utils/defineCatalogProduct';
 useSeoMeta({
   title: 'Premium Kalamata PDO Extra Virgin Olive Oil',
   description:
-    'Shop Ana’s Estate premium Kalamata PDO Extra Virgin Olive Oil, produced in Greece from early-harvest Koroneiki olives. Single estate, cold extracted and available in Canada.',
+    'Shop Ana\'s Estate premium Kalamata PDO Extra Virgin Olive Oil, produced in Greece from early-harvest Koroneiki olives. Single estate, cold extracted and available in Canada.',
 });
 
 const { data: products } = await useFetch<CatalogProduct[]>('/api/products');
@@ -260,9 +260,9 @@ useSchemaOrg([
     description: 'Premium Kalamata PDO Extra Virgin Olive Oil from Greece.',
   }),
   defineWebPage({
-    name: 'Premium Kalamata PDO Extra Virgin Olive Oil | Ana’s Estate',
+    name: 'Premium Kalamata PDO Extra Virgin Olive Oil | Ana\'s Estate',
     description:
-      'Shop Ana’s Estate premium Kalamata PDO Extra Virgin Olive Oil, produced in Greece from early-harvest Koroneiki olives.',
+      'Shop Ana\'s Estate premium Kalamata PDO Extra Virgin Olive Oil, produced in Greece from early-harvest Koroneiki olives.',
   }),
   ...defineCatalogProducts(products.value),
 ]);
@@ -270,7 +270,7 @@ useSchemaOrg([
 const harvestSteps = [
   {
     image: '/images/harvest/harvest-step-1.png',
-    alt: 'Early harvest of Koroneiki olives in the Ana’s Estate grove',
+    alt: 'Early harvest of Koroneiki olives in the Ana\'s Estate grove',
     number: '01',
     title: 'Early Harvest',
     description:
@@ -286,7 +286,7 @@ const harvestSteps = [
   },
   {
     image: '/images/harvest/harvest-step-3.png',
-    alt: 'Cold extraction of Ana’s Estate extra virgin olive oil',
+    alt: 'Cold extraction of Ana\'s Estate extra virgin olive oil',
     number: '03',
     title: 'Cold Extracted',
     description:
@@ -294,7 +294,7 @@ const harvestSteps = [
   },
   {
     image: '/images/harvest/harvest-step-4.png',
-    alt: 'Ana’s Estate olive oil being protected and packed for shipment',
+    alt: 'Ana\'s Estate olive oil being protected and packed for shipment',
     number: '04',
     title: 'Protected and Packed',
     description:

@@ -24,7 +24,7 @@
           </NuxtLink>
         </nav>
 
-        <NuxtLink class="logo" :to="homeHref" aria-label="Ana’s Estate home">
+        <NuxtLink class="logo" :to="homeHref" aria-label="Ana's Estate home">
           <NuxtImg src="/images/brand/logo.png" alt="Ana's Estate" loading="eager" format="webp" />
         </NuxtLink>
 
@@ -109,7 +109,7 @@
 
       <SectionContainer class-name="footer-main">
         <div class="brand-col">
-          <NuxtImg src="/images/brand/logo-white.png" alt="Ana’s Estate" loading="lazy" format="webp" />
+          <NuxtImg src="/images/brand/logo-white.png" alt="Ana's Estate" loading="lazy" format="webp" />
           <p>Premium Extra Virgin Olive Oil from our family groves in Kalamata, Greece.</p>
           <p>Tradition. Quality. Purity.</p>
         </div>
@@ -146,7 +146,7 @@
             <input
               type="hidden"
               name="_subject"
-              value="Ana’s Estate newsletter signup form submission"
+              value="Ana's Estate newsletter signup form submission"
             />
             <input type="hidden" name="_captcha" value="false" />
             <label for="newsletter-email" hidden>Email address</label>

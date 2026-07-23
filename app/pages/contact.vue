@@ -10,7 +10,7 @@
     <section
       class="contact-section contact-section--subpage"
       id="contact"
-      aria-label="Contact Ana’s Estate"
+      aria-label="Contact Ana's Estate"
     >
       <SectionContainer class-name="contact-section__inner">
         <div class="contact-copy reveal reveal-left">
@@ -35,7 +35,7 @@
           action="https://formsubmit.co/anas.oliveoil@gmail.com"
           method="POST"
         >
-          <input type="hidden" name="_subject" value="Ana’s Estate website contact form submission" />
+          <input type="hidden" name="_subject" value="Ana's Estate website contact form submission" />
           <input type="hidden" name="_captcha" value="false" />
 
           <InputField id="contact-name" label="Name" name="name" autocomplete="name" required />
@@ -67,6 +67,6 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Contact',
-  description: 'Contact Ana’s Estate for product questions, wholesale inquiries, and retail partnerships.',
+  description: 'Contact Ana\'s Estate for product questions, wholesale inquiries, and retail partnerships.',
 });
 </script>

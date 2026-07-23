@@ -1,7 +1,7 @@
 <template>
   <main>
     <PageHero
-      label="Shop Ana’s Estate"
+      label="Shop Ana's Estate"
       title="Our Olive Oil"
       title-id="shop-title"
       description="Choose the format that best suits your table, kitchen or foodservice needs."
@@ -32,7 +32,7 @@ import { defineCatalogProducts } from '~/utils/defineCatalogProduct';
 
 useSeoMeta({
   title: 'Shop',
-  description: 'Shop Ana’s Estate premium Kalamata PDO Extra Virgin Olive Oil in bottle and case formats.',
+  description: 'Shop Ana\'s Estate premium Kalamata PDO Extra Virgin Olive Oil in bottle and case formats.',
 });
 
 const { data: products } = await useFetch<CatalogProduct[]>('/api/products');

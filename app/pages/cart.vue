@@ -97,13 +97,11 @@
 </template>
 
 <script setup lang="ts">
-import { formatCurrency } from '#shared/utils/format';
-import { productPath } from '#shared/utils/product';
 import type { CatalogProduct } from '#shared/types';
 
 useSeoMeta({
   title: 'Cart',
-  description: 'Review your Ana’s Estate olive oil order before checkout.',
+  description: 'Review your Ana\'s Estate olive oil order before checkout.',
 });
 
 const { data: products } = await useFetch<CatalogProduct[]>('/api/products');

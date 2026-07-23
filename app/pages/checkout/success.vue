@@ -18,7 +18,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Order Confirmed',
-  description: 'Thank you for your Ana’s Estate olive oil order.',
+  description: 'Thank you for your Ana\'s Estate olive oil order.',
 });
 
 const { clearCart } = useCart();
