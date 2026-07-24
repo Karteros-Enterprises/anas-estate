@@ -96,6 +96,8 @@ export default defineNuxtConfig({
     '/checkout/**': { robots: 'noindex, nofollow' },
     '/checkout/success': { static: true },
     '/checkout/cancel': { static: true },
+    '/shop': { redirect: '/products' },
+    '/pricing': { redirect: '/products' },
   },
   sitemap: {
     sources: ['/api/__sitemap__/urls'],
